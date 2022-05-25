@@ -1,5 +1,5 @@
 import './style.css'
-import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js'
+import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
 
@@ -66,8 +66,8 @@ light2.addColor(light2Color, 'color')
     pointLight2.color.set(light2Color.color)
 })
 
-const pointLightHelper = new THREE.PointLightHelper(pointLight2, 0.1)
-scene.add(pointLightHelper)
+//const pointLightHelper = new THREE.PointLightHelper(pointLight2, 0.1)
+//scene.add(pointLightHelper)
 
 //light 3
 const pointLight3 = new THREE.PointLight(0x52166e, 0.1)
@@ -91,8 +91,8 @@ light3.addColor(light3Color, 'color')
     pointLight3.color.set(light3Color.color)
 })
 
-const pointLightHelper3 = new THREE.PointLightHelper(pointLight3, 0.1)
-scene.add(pointLightHelper3)
+//const pointLightHelper3 = new THREE.PointLightHelper(pointLight3, 0.1)
+//scene.add(pointLightHelper3)
 
 
 /**
