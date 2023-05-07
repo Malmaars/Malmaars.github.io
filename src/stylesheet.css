@@ -1,0 +1,145 @@
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+body{
+    background-color: black;
+    color: #ffc82a;
+}
+
+.topnav{
+    background-color: #1e1e1e;
+    overflow: hidden;
+    padding-left: 39.5%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ffe9a7;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #ffc82a;
+    color: black;
+  }
+
+  .border{
+    position: absolute;
+    left: 50px; 
+    right: 50px;
+    top: 50px;
+    bottom: 50px;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #fcdd03;
+    border-width: 2px; 
+  }
+
+.smallBorder{
+    position: absolute;
+    left: 10px; 
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #fcdd03;
+    border-width: 2px; 
+}
+
+.backgroundPicture{
+    background-color: #1e1e1e;
+    position: absolute;
+    left: 0; 
+    right: 0;
+    top: 100px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 1600px;
+    height: 650px;
+    z-index: -100;
+}
+
+.intro{
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 250px;
+}
+
+.info{
+    position: absolute;
+    left: 500px; 
+    top: 300px;
+}
+
+.quickLinks{
+    background-color: #1e1e1e;
+    position: absolute;
+    left: 0; 
+    right: 0;
+    top: 785px; 
+    margin-left: auto; 
+    margin-right: auto;
+    width: 800px;
+    height: 100px;
+    z-index: -100;
+}
+
+h1{
+    position: absolute;
+    color: #ffc82a;
+    font-family: 'Cascadia Code', sans-serif;
+    font-size: 20px;
+    margin-top: -25px;
+    margin-left: -2px;
+    -webkit-text-size-adjust: none;
+}
+
+h2{
+    color: #ffc82a;
+    text-align: center;
+    font-family: 'Cascadia Code', sans-serif;
+    font-size: medium;
+    margin-top: 10px;
+}
+
+
+p{
+    text-align: left;
+    margin-left: 10px;
+    font-family: 'Cascadia Code', sans-serif;
+}
+
+a{
+    font-family: 'Cascadia Code', sans-serif;
+}
+
+.type{
+    color: #2362f5;
+}
+
+.variable{
+    color: #dcdcdc;
+}
+
+.value{
+    color: #fcdd03;
+}
