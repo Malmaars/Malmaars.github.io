@@ -24,11 +24,9 @@ class vector2 {
 class OrbitingPlanet
 {
     //planetElement is the element we want to move, orbitingElement is what it orbits around, distance is the distance between the planet and what it orbits
-    constructor(planetElementName, orbitingElementName, rotationSpeed){
+    constructor(planetElementName, orbitingElementName, rotationSpeed, ){
         
-        this.radians = 0;
         //set the radians to its start position instead of just 0
-
 
         this.planetElement = document.getElementById(planetElementName).style;
         this.rotationSpeed = rotationSpeed;
@@ -42,6 +40,7 @@ class OrbitingPlanet
         var orbitOffset = this.orbitingRef.position();
         
         this.distance = Math.sqrt(Math.pow(offset.left - orbitOffset.left, 2) + Math.pow(offset.top - orbitOffset.top, 2));
+        this.radians = Math.atan2(offset.top - orbitOffset.top, offset.left - orbitOffset.left);
     }
 
     //get the distance between the planet and what it orbits
@@ -94,6 +93,13 @@ const planets = [
    new OrbitingPlanet("planetTwoMoon", "planetTwo", -0.01),
    new OrbitingPlanet("planetTwoMoonOrbit", "planetTwo", 0),
    new OrbitingPlanet("planetThree", "sun", 0.001),
+   new OrbitingPlanet("planetThreeMoonOne", "planetThree", 0.01),
+   new OrbitingPlanet("planetThreeMoonTwo", "planetThree", 0.01),
+   new OrbitingPlanet("planetThreeMoonThree", "planetThree", 0.01),
+   new OrbitingPlanet("planetThreeMoonFour", "planetThree", 0.01),
+   new OrbitingPlanet("planetThreeMoonFive", "planetThree", 0.01),
+   new OrbitingPlanet("planetThreeMoonSix", "planetThree", 0.01),
+   new OrbitingPlanet("planetThreeMoonOrbit", "planetThree", 0),
    new OrbitingPlanet("planetFour", "sun", 0.0015),
    new OrbitingPlanet("planetFive", "sun", 0.0015)
 ]

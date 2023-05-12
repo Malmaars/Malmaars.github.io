@@ -127,6 +127,52 @@ body{
     width: 750px;
 }
 
+.centered.celestialBody.planetThreeMoonOne{
+    height: 9px;
+    width: 9px;
+    left: 650px;
+}
+
+.centered.celestialBody.planetThreeMoonTwo{
+    height: 9px;
+    width: 9px;
+    left: 800px;
+    top: -86.60254037844386px;
+}
+
+.centered.celestialBody.planetThreeMoonThree{
+    height: 9px;
+    width: 9px;
+    left: 800px;
+    top: 86.60254037844386px;
+}
+
+.centered.celestialBody.planetThreeMoonFour{
+    height: 9px;
+    width: 9px;
+    left: 850px;
+}
+
+.centered.celestialBody.planetThreeMoonFive{
+    height: 9px;
+    width: 9px;
+    left: 700px;
+    top: -86.60254037844386px;
+}
+
+.centered.celestialBody.planetThreeMoonSix{
+    height: 9px;
+    width: 9px;
+    left: 700px;
+    top: 86.60254037844386px;
+}
+
+.centered.orbit.planetThreeMoonOrbit{
+    height: 100px;
+    width: 100px;
+    left: 750px;
+}
+
 .centered.celestialBody.planetFour{
     height: 40px;
     width: 40px;
