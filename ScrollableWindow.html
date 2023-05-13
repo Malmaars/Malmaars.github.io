@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@5.3.0/dist/simplebar.min.css" />
+  <style>
+    .custom-scroll {
+      width: 300px;
+      height: 200px;
+      overflow: auto;
+    }
+  
+    .custom-scroll::-webkit-scrollbar {
+      width: 10px;
+    }
+  
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background-color: red;
+    }
+  
+    .custom-scroll::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <div class="custom-scroll">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Integer eu sagittis dolor, vitae convallis ipsum.</p>
+    <p>Sed eget orci eget felis bibendum feugiat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Integer eu sagittis dolor, vitae convallis ipsum.</p>
+    <p>Sed eget orci eget felis bibendum feugiat.</p>
+    <!-- Add more content here -->
+  </div>
+
+  <script src="https://unpkg.com/simplebar@5.3.0/dist/simplebar.min.js"></script>
+  <script>
+    const customScroll = new SimpleBar(document.querySelector('.custom-scroll'));
+  </script>
+</body>
+</html>

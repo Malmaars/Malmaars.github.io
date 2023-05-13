@@ -2,11 +2,11 @@
 
 .centered{
     /*base class for all things that I want centered*/
-    position: absolute;
-    left: 0px; 
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
+    position:absolute;
+    left: 0vw; 
+    right: 0vw;
+    top: 0vw;
+    bottom: 0vw;
     margin: auto;
 }
 
@@ -17,18 +17,19 @@ body{
 }
 
 .border{
-    width: 97%;
-    height: 96%;
+    width: 97vw;
+    height: 96vh;
     background-color: transparent;
     border-style: solid;
     border-color: #fff;
-    border-width: 2px; 
+    border-width: 0.2vw; 
 
     position: absolute;
     margin: auto;
+    display: flex;
   }
 
-.centered.backgroundPicture{
+.backgroundPicture{
     background-color: #1e1e1e;
     top: 100px; 
     width: 1600px;
@@ -61,197 +62,228 @@ body{
     z-index: -100;
 }
 
-.centered.solarSystem{
-    left: 0px;
+.aboutSite{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    overflow: auto;
+    background-color: blue;
 }
 
-.centered.celestialBody{
+.cornerArtParent{
+    width: 97vw;
+    height: 96vh;
+    margin: auto;
+    display: flex;
+}
+
+.cornerArtUpperRight img{
+    position: absolute;
+    justify-self: end;
+    right: -0.3vw;
+    top: -0.3vw;
+    width: 15vw;
+    height: 15vw;
+}
+
+.cornerArtBottomLeft img{
+    position: absolute;
+    justify-self: start;
+    bottom: -0.3vw;
+    left: -0.3vw;    
+
+    width: 15vw;
+    height: 15vw;
+    transform: scaleX(-1) scaleY(-1);
+}
+
+.solarSystem{
+    left: 35vw;
+}
+
+.celestialBody{
     background-color: #fff;
     border-radius: 50%;
 }
 
-.centered.orbit{
+.orbit{
     background-color: transparent;
-    border:1px solid white; 
+    border:0.05208333333vw solid white; 
     border-radius: 50%;
 }
 
-.centered.celestialBody.sun{
-    height: 100px;
-    width: 100px;
+.sun {
+    height: 5.20833vw;
+    width: 5.20833vw;
 }
 
-.centered.celestialBody.planetOneCenter{
-    height: 0px;
-    width: 0px;
-    left: 225px;
+.planetOneCenter {
+    height: 0vw;
+    width: 0vw;
+    left: 11.71875vw;
+}
+.planetOne {
+    height: 0.78125vw;
+    width: 0.78125vw;
+    left: 10.67708vw;
 }
 
-.centered.celestialBody.planetOne {
-    height: 15px;
-    width: 15px;
-    left: 205px;
+.planetOneSecondHalf {
+    height: 0.78125vw;
+    width: 0.78125vw;
+    left: 12.89062vw;
 }
 
-.centered.celestialBody.planetOneSecondHalf {
-    height: 15px;
-    width: 15px;
-    left: 245px;
+.planetOneOrbit {
+    height: 11.71875vw;
+    width: 11.71875vw;
 }
 
-.centered.orbit.planetOne{
-    height: 225px;
-    width: 225px;
+.planetTwo {
+    height: 1.30208vw;
+    width: 1.30208vw;
+    left: 20.83333vw;
 }
 
-.centered.celestialBody.planetTwo{
-    height: 25px;
-    width: 25px;
-    left: 400px; 
+.planetTwoOrbit {
+    height: 20.83333vw;
+    width: 20.83333vw;
 }
 
-.centered.orbit.planetTwo{
-    height: 400px;
-    width: 400px;
+.planetTwoMoon {
+    height: 0.36458vw;
+    width: 0.36458vw;
+    left: 18.22917vw;
 }
 
-.centered.celestialBody.planetTwoMoon{
-    height: 7px;
-    width: 7px;
-    left: 350px; 
+.planetTwoMoonOrbit {
+    height: 2.60417vw;
+    width: 2.60417vw;
+    left: 20.83333vw;
 }
 
-.centered.orbit.planetTwoMoon{
-    height: 50px;
-    width: 50px;
-
-    left: 400px;
+.planetThree {
+    height: 3.125vw;
+    width: 3.125vw;
+    left: 39.0625vw;
+}
+.planetThreeOrbit {
+    height: 39.0625vw;
+    width: 39.0625vw;
 }
 
-.centered.celestialBody.planetThree{
-    height: 60px;
-    width: 60px;
-    left: 750px;
+.planetThreeMoonOne {
+    height: 0.46875vw;
+    width: 0.46875vw;
+    left: 33.8542vw
+  }
+  
+  .planetThreeMoonTwo {
+    height: 0.46875vw;
+    width: 0.46875vw;
+    left: 41.6667vw;
+    top: -4.51042vw;
+  }
+  
+  .planetThreeMoonThree {
+    height: 0.46875vw;
+    width: 0.46875vw;
+    left: 41.6667vw;
+    top: 4.51042vw;
+  }
+  
+  .planetThreeMoonFour {
+    height: 0.46875vw;
+    width: 0.46875vw;
+    left: 44.2708vw;
+  }
+  
+  .planetThreeMoonFive {
+    height: 0.46875vw;
+    width: 0.46875vw;
+    left: 36.4583vw;
+    top: -4.51042vw;
+  }
+  
+  .planetThreeMoonSix {
+    height: 0.46875vw;
+    width: 0.46875vw;
+    left: 36.4583vw;
+    top: 4.51042vw;
+  }
+  
+  .planetThreeMoonSeven {
+    height: 0.46875vw;
+    width: 0.46875vw;
+    left: 39.0625vw;
+    top: -5.20833vw;
+  }
+  
+  .planetThreeMoonEight {
+    height: 0.46875vw;
+    width: 0.46875vw;
+    left: 39.0625vw;
+    top: 5.20833vw;
+  }
+  
+  .planetThreeMoonNine {
+    height: 0.46875vw;
+    width: 0.46875vw;
+    left: 34.5521vw;
+    top: 2.60417vw;
+  }
+  
+  .planetThreeMoonTen {
+    height: 0.46875vw;
+    width: 0.46875vw;
+    left: 43.5729vw;
+    top: 2.60417vw;
+  }
+  
+  .planetThreeMoonEleven {
+    height: 0.46875vw;
+    width: 0.46875vw;
+    left: 34.5521vw;
+    top: -2.60417vw;
+  }
+  
+  .planetThreeMoonTwelve {
+    height: 0.46875vw;
+    width: 0.46875vw;
+    left: 43.5729vw;
+    top: -2.60417vw;
+  }  
+
+.planetThreeMoonOrbit {
+    height: 1.30208vw;
+    width: 1.30208vw;
+    left: 39.0625vw;
 }
 
-.centered.orbit.planetThree{
-    height: 750px;
-    width: 750px;
+.planetFour {
+    height: 2.08333vw;
+    width: 2.08333vw;
+    left: 28.64583vw;
 }
 
-.centered.celestialBody.planetThreeMoonOne{
-    height: 9px;
-    width: 9px;
-    left: 650px;
+.planetFourOrbit {
+    height: 28.64583vw;
+    width: 28.64583vw;
 }
 
-.centered.celestialBody.planetThreeMoonTwo{
-    height: 9px;
-    width: 9px;
-    left: 800px;
-    top: -86.60254037844386px;
+.planetFive {
+    height: 2.08333vw;
+    width: 2.08333vw;
+    left: -28.64583vw;
 }
 
-.centered.celestialBody.planetThreeMoonThree{
-    height: 9px;
-    width: 9px;
-    left: 800px;
-    top: 86.60254037844386px;
-}
-
-.centered.celestialBody.planetThreeMoonFour{
-    height: 9px;
-    width: 9px;
-    left: 850px;
-}
-
-.centered.celestialBody.planetThreeMoonFive{
-    height: 9px;
-    width: 9px;
-    left: 700px;
-    top: -86.60254037844386px;
-}
-
-.centered.celestialBody.planetThreeMoonSix{
-    height: 9px;
-    width: 9px;
-    left: 700px;
-    top: 86.60254037844386px;
-}
-
-.centered.celestialBody.planetThreeMoonSeven {
-    height: 9px;
-    width: 9px;
-    left: 750px;
-    top: -100px;
-}
-
-.centered.celestialBody.planetThreeMoonEight {
-    height: 9px;
-    width: 9px;
-    left: 750px;
-    top: 100px;
-}
-
-.centered.celestialBody.planetThreeMoonNine {
-    height: 9px;
-    width: 9px;
-    left: 663.3974596215561px;
-    top: 50px;
-}
-
-.centered.celestialBody.planetThreeMoonTen {
-    height: 9px;
-    width: 9px;
-    left: 836.6025403784439px;
-    top: 50px;
-}
-
-.centered.celestialBody.planetThreeMoonEleven {
-    height: 9px;
-    width: 9px;
-    left: 663.3974596215561px;
-    top: -50px;
-}
-
-.centered.celestialBody.planetThreeMoonTwelve {
-    height: 9px;
-    width: 9px;
-    left: 836.6025403784439px;
-    top: -50px;
-}
-
-
-.centered.orbit.planetThreeMoonOrbit{
-    height: 100px;
-    width: 100px;
-    left: 750px;
-}
-
-.centered.celestialBody.planetFour{
-    height: 40px;
-    width: 40px;
-    left: 550px;
-}
-
-.centered.orbit.planetFour{
-    height: 550px;
-    width: 550px;
-}
-
-.centered.celestialBody.planetFive{
-    height: 40px;
-    width: 40px;
-    left: -550px;
-}
-
-.centered.celestialBody.wormHoleA{
+.wormHoleA{
     height: 50px;
     width: 50px;
     left: 1200px;
 }
 
-.centered.celestialBody.wormHoleB{
+.wormHoleB{
     height: 50px;
     width: 50px;
     left: -1200px;
@@ -261,9 +293,9 @@ h1{
     position: absolute;
     color: #fff;
     font-family: 'Cascadia Code', sans-serif;
-    font-size: 20px;
-    margin-top: 0cm;
-    margin-left: 5px;
+    font-size: 1vw;
+    margin-top: 0vw;
+    margin-left: 0.2vw;
     -webkit-text-size-adjust: none;
 }
 

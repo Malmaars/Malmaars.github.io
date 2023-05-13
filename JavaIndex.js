@@ -36,11 +36,22 @@ class OrbitingPlanet
         var offset = planetRef.position();
         //this.distance = offset.left;
 
+        var offsetInVw = {
+          left: (offset.left / $(window).width()) * 100,
+          top: (offset.top / $(window).width()) * 100
+        };
+
         this.orbitingRef = $("#" + orbitingElementName);
         var orbitOffset = this.orbitingRef.position();
+
+        var orbitOffsetInVw = {
+          left: (orbitOffset.left / $(window).width()) * 100,
+          top: (orbitOffset.top / $(window).width()) * 100
+        };
+
         
-        this.distance = Math.sqrt(Math.pow(offset.left - orbitOffset.left, 2) + Math.pow(offset.top - orbitOffset.top, 2));
-        this.radians = Math.atan2(offset.top - orbitOffset.top, offset.left - orbitOffset.left);
+        this.distance = Math.sqrt(Math.pow(offsetInVw.left - orbitOffsetInVw.left, 2) + Math.pow(offsetInVw.top - orbitOffsetInVw.top, 2));
+        this.radians = Math.atan2(offsetInVw.top - orbitOffsetInVw.top, offsetInVw.left - orbitOffsetInVw.left);
     }
 
     //get the distance between the planet and what it orbits
@@ -53,7 +64,12 @@ class OrbitingPlanet
 
         //I can make something orbit by fetching the center. I can determine position by its radians
         var orbitOffset = this.orbitingRef.position();
-        this.orbitingPosition = new vector2(orbitOffset.left, orbitOffset.top);
+        var orbitOffsetInVw = {
+          left: (orbitOffset.left / $(window).width()) * 100,
+          top: (orbitOffset.top / $(window).width()) * 100
+        };
+        
+        this.orbitingPosition = new vector2(orbitOffsetInVw.left, orbitOffsetInVw.top);
 
         //before delving into any time based things, let's try orbiting the planets first
         this.SetPosition(this.planetElement, this.CalculatePosition(this.orbitingPosition, this.distance, this.radians));
@@ -61,6 +77,9 @@ class OrbitingPlanet
         if(this.radians > Math.PI*2){
             this.radians -= Math.PI*2;
         }
+
+        console.log(this.planetElement.left);
+        console.log(this.planetElement.top);
     }
     
     
@@ -72,17 +91,19 @@ class OrbitingPlanet
         var yPos = Math.sin(radians);
 
         //add the offset of the center and add the new distance from it
-        xPos += orbitCenter.x + xPos * distance;
-        yPos += orbitCenter.y + yPos * distance;
+        //I don't know why, but I need to do -1 here???
+        xPos += orbitCenter.x + xPos * (distance - 1);
+        yPos += orbitCenter.y + yPos * (distance - 1);
 
-    
+        console.log(distance);
+
         return new vector2(xPos, yPos);
     }
     
     //element is the element we want to set the position of, the position is a vector2 
     SetPosition(element, newPosition){
-        element.left = newPosition.x + "px";
-        element.top = newPosition.y + "px";
+        element.left = newPosition.x + "vw";
+        element.top = newPosition.y + "vw";
     }
 
 }
@@ -130,6 +151,3 @@ function Animate(){
     requestAnimationFrame(Animate);
 }
 Animate();
-
-
-
