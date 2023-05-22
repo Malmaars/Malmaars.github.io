@@ -2,14 +2,89 @@
 <html>
 <head>
   <style>
-    .box {
-      width: 50vw;
-      height: 50vh;
+    .container {
+      position: relative;
+    }
+
+    .element1,
+    .element2 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
       background-color: red;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    .element1 {
+      animation-name: moveUpAndDown1;
+      left: 100px;
+    }
+
+    .element2 {
+      animation-name: moveUpAndDown2;
+    }
+
+    .line {
+      position: absolute;
+      background-color: black;
+      width: 2px;
+      height: 0;
+    }
+
+    @keyframes moveUpAndDown1 {
+      0% { top: 0px; }
+      50% { top: 200px; }
+      100% { top: 0px; }
+    }
+
+    @keyframes moveUpAndDown2 {
+      0% { top: 0px; }
+      50% { top: 150px; }
+      100% { top: 0px; }
     }
   </style>
 </head>
 <body>
-  <div class="box"></div>
+  <div class="container">
+    <div class="element1"></div>
+    <div class="element2"></div>
+    <div class="line"></div>
+  </div>
+
+  <script>
+    const element1 = document.querySelector('.element1');
+    const element2 = document.querySelector('.element2');
+    const line = document.querySelector('.line');
+
+    function updateLine() {
+      const element1Rect = element1.getBoundingClientRect();
+      const element2Rect = element2.getBoundingClientRect();
+
+      const x1 = element1Rect.left + element1Rect.width / 2;
+      const y1 = element1Rect.top + element1Rect.height / 2;
+
+      const x2 = element2Rect.left + element2Rect.width / 2;
+      const y2 = element2Rect.top + element2Rect.height / 2;
+
+      const angle = Math.atan2(y2 - y1, x2 - x1);
+      const distance = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+
+      line.style.left = x1 + 'px';
+      line.style.top = y1 + 'px';
+      line.style.transform = 'rotate(' + angle + 'rad)';
+      line.style.height = distance + 'px';
+    }
+
+    // Call the updateLine function whenever the elements move or the window is resized
+    window.addEventListener('resize', updateLine);
+    window.addEventListener('scroll', updateLine);
+    element1.addEventListener('animationiteration', updateLine);
+    element2.addEventListener('animationiteration', updateLine);
+
+    // Initial update
+    updateLine();
+  </script>
 </body>
 </html>

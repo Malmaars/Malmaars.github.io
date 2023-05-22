@@ -27,7 +27,6 @@ class OrbitingPlanet
   constructor(planetElementName, orbitingElementName, rotationSpeed, ){
       
       //set the radians to its start position instead of just 0
-
       this.planetElement = document.getElementById(planetElementName).style;
       this.rotationSpeed = rotationSpeed;
       this.orbitingElement = document.getElementById(orbitingElementName).style;
@@ -104,6 +103,7 @@ class OrbitingPlanet
 }
 
 const planets = [
+ new OrbitingPlanet("sun", "sun", 0),
  new OrbitingPlanet("planetOneCenter", "sun", 0.005), 
  new OrbitingPlanet("planetOne", "planetOneCenter", -0.003), 
  new OrbitingPlanet("planetOneSecondHalf", "planetOneCenter", -0.003), 

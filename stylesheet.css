@@ -1,4 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/cascadia-code');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 .centered{
     /*base class for all things that I want centered*/
@@ -27,6 +29,7 @@ body{
     position: absolute;
     margin: auto;
     display: flex;
+    overflow: hidden;
   }
 
 .backgroundPicture{
@@ -41,6 +44,16 @@ body{
     max-width: 1000px;
     margin: auto;
     padding-top: 250px;
+}
+
+.myFace img{
+    position: absolute;
+    justify-self:flex-end;
+    width: 40%;
+    max-width: 300px;
+    height: auto;
+    right: 2vw;
+    top: 8vw;
 }
 
 .info{
@@ -64,41 +77,133 @@ body{
 
 .iconParent{
     position: absolute;
-    margin-top: 3vh;
     margin-left: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 iconP{
-    margin-left: 20px;
+    margin-left: 1vw;
     font-family: 'Cascadia Code', sans-serif;
-    font-size: 35px;
+    font-size: 2vw;
     color: white;
 }
 
-.aboutSiteIcon{
+.pageIcon{
     display: flex;
     align-items: center;;
-    width: 400px;
-    height: 100px;
-    border: solid;
+    width: 150%;
+    height: 6vw;
+    background-color: #222222;
+    /*border: solid;
     border-color: white;
-    border-width: 0.1vw;
-    margin-top: 10px;
+    border-width: 0.1vw;*/
+    margin-top: 0.8vw;
     cursor: pointer;
 }
 
-.aboutSiteIcon img{
-    width: 90px;
-    height: 90px;
-    margin-left: 5px;
+.pageIcon img{
+    width: 5vw;
+    height: 5vw;
+    margin-left: 0.5vw;
 }
 
-.aboutSite{
+.smallParent{
+    width: 3.5vw;
+    background-color: transparent;
+    display: flex;
+    overflow: hidden;
+
+    transition: width 0.4s ease;
+}
+
+.smallParent:hover{
+    cursor: pointer;
+}
+
+.smallPageIcon{
+    width: 3vw;
+    height: 3vw;
+    background-color: #1b1b1b;
+    border: solid white 0.1vw;
+    
+    z-index: 12;
+
+    transition-delay:  0.3s;
+    transition-property: border;
+}
+
+.smallPageIcon img{
+    width: 100%;
+    height: 100%;
+}
+
+.smallPageName{
     position: absolute;
-    width: 40%;
+    overflow: hidden;
+    width: 9vw;
+    height: 3vw;
+    background-color: #1b1b1b;
+    border: solid white 0.1vw;
+    border-left: none;
+
+    transition-delay:  0.3s;
+    transition-property: border;
+
+    margin-left: -7vw;
+    transition: margin 0.3s ease;
+
+    z-index: 11;
+}
+
+.smallPageName p{
+    color: white;
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5vw;
+}
+
+.page{
+    display: grid;
+    position: absolute;
+    width: 45%;
+    left: -45%;
+    transition: width 0.4s ease;
+    transition: left 0.5s ease;
     height: 100%;
     overflow: auto;
-    background-color: blue;
+    background-color: #222222;
+    z-index: 11;
+}
+
+.pageHeader{
+    width: 100%;
+    height: 8vh;
+    display: grid;  
+}
+
+.contentBlock{
+    width: 80%;
+    margin: auto;
+    display:grid;
+}
+
+.closeButton{
+    justify-self: end;
+    margin-top: 0.5vh;
+    margin-right: 0.5vw;
+}
+
+.closeButton img{
+    width: 3vw;
+    height: 3vw;
+}
+
+.closeButton:hover{
+    cursor: pointer;
 }
 
 .cornerArtParent{
@@ -132,16 +237,19 @@ iconP{
     left: 35vw;
     height: 90vh;
     width: 50vw;
+
 }
 
 .celestialBody{
     background-color: #fff;
     border-radius: 50%;
     z-index: 10;
+    transition: background-color 0.4s ease;
 }
 
 .celestialBody:hover{
     cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .orbit{
@@ -338,18 +446,25 @@ h1{
 }
 
 h2{
-    color: #ffc82a;
+    color: white;
     text-align: center;
     font-family: 'Cascadia Code', sans-serif;
-    font-size: medium;
-    margin-top: 10px;
+    font-size: 4vh;
+    margin:0 auto;
+    margin-top: 0.5vw;
+    white-space: nowrap;
 }
 
 
 p{
     text-align: left;
     margin-left: 10px;
-    font-family: 'Cascadia Code', sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    top: 0%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 20px;
 }
 
 a{
