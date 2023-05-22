@@ -56,7 +56,7 @@ function OpenPage(pagename){
 
 function ClosePage(element){
   element.style.width = "45%";
-  element.style.left = "-45%";
+  element.style.left = "-50%";
   openPage = null;
   UnFocus();
 }
