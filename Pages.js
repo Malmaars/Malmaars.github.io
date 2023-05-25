@@ -35,7 +35,6 @@ function Initialize(){
   for (let k = 0; k < smallParents.length; k++){
     smallParents[k].addEventListener('mouseover', function(event) { SmallPageHover(smallParents[k]);});
     smallParents[k].addEventListener('mouseout', function(event) { SmallPageHoverExit(smallParents[k]);});
-    console.log(smallParents[k]);
   }
 }
 
@@ -63,28 +62,38 @@ function ClosePage(element){
 
 function ResizePage(){
 
-  if(openPage == null){
-    return;
-  }
   var windowWidth = window.innerWidth || document.documentElement.clientWidth;
   var windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
   //also do some stuff with the buttons, maybe even change the stylesheet
 
   //get the close button
-  var closeButton = openPage.getElementsByClassName("closeButton")[0];
-  
+  if(openPage != null)
+  {
+    var closeButton = openPage.getElementsByClassName("closeButton")[0];
+  }
+  const border = document.getElementById("border");
+  console.log(border);
 
   if(windowHeight < windowWidth){
+    if(openPage!=null)
+    {
     openPage.style.width = "45%";
     openPage.style.left = "0%";
     closeButton.style.marginRight = "-4vw";
+    }
+
+    border.style.height= "96vh";
   }
 
   else{
+    if(openPage!=null)
+    {
     openPage.style.width = "100%"
     openPage.style.left = "0%";
     closeButton.style.marginRight = "4vw";
+    }
+    border.style.height= "80vh";
   }
 }
 
