@@ -66,6 +66,8 @@ body{
     margin: auto;
     display: flex;
     overflow: hidden;
+
+    transition: height 0.4s ease;
   }
 
 .backgroundPicture{
