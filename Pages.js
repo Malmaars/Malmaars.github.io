@@ -93,7 +93,7 @@ function ResizePage(){
     openPage.style.left = "0%";
     closeButton.style.marginRight = "4vw";
     }
-    border.style.height= "80vh";
+    border.style.height= "90vh";
   }
 }
 
