@@ -97,6 +97,7 @@ function ResizePage(){
   }
 }
 
+ResizePage();
 addEventListener('resize', ResizePage);
 
 function SmallPageHover(parentElement){
