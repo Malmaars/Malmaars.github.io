@@ -69,26 +69,40 @@ function ResizePage(){
   var windowWidth = window.innerWidth || document.documentElement.clientWidth;
   var windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
+  //also do some stuff with the buttons, maybe even change the stylesheet
+
+  //get the close button
+  var closeButton = openPage.getElementsByClassName("closeButton")[0];
+  
+
   if(windowHeight < windowWidth){
     openPage.style.width = "45%";
     openPage.style.left = "0%";
+    closeButton.style.marginRight = "-4vw";
   }
 
   else{
     openPage.style.width = "100%"
     openPage.style.left = "0%";
+    closeButton.style.marginRight = "4vw";
   }
 }
 
 addEventListener('resize', ResizePage);
 
 function SmallPageHover(parentElement){
+  parentElement.parentNode.style.transitionDelay = "0s";
+  parentElement.parentNode.style.width = "12.5vw";
+  parentElement.parentNode.style.right = "-12.5vw";
   parentElement.style.width = "12vw";
   var pageName = parentElement.getElementsByClassName("smallPageName")[0];
   pageName.style.marginLeft = "3vw";
   parentElement.getElementsByClassName("smallPageIcon")[0].style.borderRight = "none";
 }
 function SmallPageHoverExit(parentElement){
+  parentElement.parentNode.style.transitionDelay = "0.3s";
+  parentElement.parentNode.style.width = "3.5vw";
+  parentElement.parentNode.style.right = "-3.5vw";
   parentElement.style.width = "3.5vw";
   var pageName = parentElement.getElementsByClassName("smallPageName")[0];
   pageName.style.marginLeft = "-6vw";
