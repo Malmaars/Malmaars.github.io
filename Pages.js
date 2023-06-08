@@ -73,7 +73,6 @@ function ResizePage(){
     var closeButton = openPage.getElementsByClassName("closeButton")[0];
   }
   const border = document.getElementById("border");
-  console.log(border);
 
   if(windowHeight < windowWidth){
     if(openPage!=null)
