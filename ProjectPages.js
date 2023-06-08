@@ -1,15 +1,6 @@
 var currentPopUp;
 var popUpExists = false;
 
-document.getElementById('ThrowBot').addEventListener('click', function(event) {SpawnPage(
-  "ThrowBot",
-  "Developer/Designer",
-  "A game made for the speed jam. It was made in 3 days, with the team consisting of 4 members. 2 artists, 1 sound designer and me as the developer and game designer. <br> The goal of the jam was to make a game focused on speedrunning.",
-  ["images/Projects/THROWBOT_20title_20screen.jpg","images/Projects/ThrowBotScreenshot.png","images/Projects/ThrowBotGameplay.gif","images/Projects/Cinematic_20Frame_203.jpg"],
-  "https://matotam.itch.io/throwbot",
-  "Go to game"
-);});
-
 //The plan is to use this function to create the pop-up. In the parameters we can pass the unique information,
 //Such as the title, images, description, and link
 async function SpawnPage(title, roles, description, images, link, buttonText){
@@ -25,10 +16,10 @@ async function SpawnPage(title, roles, description, images, link, buttonText){
   //load the images and check their aspect ratio, this will determine the size of the box
   
   //1: get the width of the popup
-  //1.1: set the width of the popup based one the screen size
+  //1.1: set the width of the popup based on the screen size
 
   //for now we'll do it with a fixed width
-  currentPopUp.style.width = "1200px";
+  currentPopUp.style.width = "1350px";
 
   var popUpImageParent = document.createElement('div');
   popUpImageParent.className = "popUpImage";
@@ -109,7 +100,7 @@ async function SpawnPage(title, roles, description, images, link, buttonText){
   console.log("creating popup");
   document.body.insertBefore(currentPopUp,document.getElementById("border"));
   await delay(10);
-  SetSizeInPixels(1200, newHeight);
+  SetSizeInPixels(1350, newHeight);
   await delay(500);
   popUpImageParent.style.opacity = "1";
   popUpTextParent.style.opacity = "1";
@@ -161,3 +152,70 @@ $(document).ready(function(){
       }
   });
 });
+
+var images = [];
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+
+preload(
+  "images/Projects/THROWBOT_20title_20screen.jpg","images/Projects/ThrowBotScreenshot.png","images/Projects/ThrowBotGameplay.gif","images/Projects/Cinematic_20Frame_203.jpg",
+  "images/Projects/AntInferno.png","images/Projects/GunFileMain.png","images/Projects/GunFile2.png","images/Projects/GunFile3.png",
+  "images/Projects/Energizer1.png","images/Projects/Energizer2.png","images/Projects/Energizer3.png","images/Projects/Energizer4.png",
+  "images/Projects/PackCheck1.jpg","images/Projects/PackCheck4.jpg","images/Projects/PackCheck2.jpg","images/Projects/PackCheck3.jpg",
+  "images/Projects/Knowhere1.png","images/Projects/Knowhere2.png","images/Projects/Knowhere3.png","images/Projects/Knowhere4.png",
+  "images/Projects/Whole1.png","images/Projects/Whole2.png","images/Projects/Whole3.png","images/Projects/Whole4.png"
+);
+
+
+document.getElementById('ThrowBot').addEventListener('click', function(event) {SpawnPage(
+  "ThrowBot",
+  "Developer/Designer",
+  "A game made for the speed jam in 2023. It was made in 3 days, with the team consisting of 4 members. 2 artists, 1 sound designer and me as the developer and game designer. <br> The goal of the jam was to make a game focused on speedrunning.",
+  ["images/Projects/THROWBOT_20title_20screen.jpg","images/Projects/ThrowBotScreenshot.png","images/Projects/ThrowBotGameplay.gif","images/Projects/Cinematic_20Frame_203.jpg"],
+  "https://matotam.itch.io/throwbot",
+  "Go to game"
+);});
+document.getElementById('GunFile').addEventListener('click', function(event) {SpawnPage(
+  "Gun File: Root",
+  "Developer/Designer",
+  "A game made for the global game jam in 2023. The jam lasted 2 days. I made it in collaboration with one artist, making the team called <b>Ant Inferno</b>. <br> The game is very experimental, and overshot it's small scope a little, but I'm proud of it nonetheless. The theme of the jam was <b>roots</b>, and we tried to make the interpretation of the theme unique.",
+  ["images/Projects/AntInferno.png","images/Projects/GunFileMain.png","images/Projects/GunFile2.png","images/Projects/GunFile3.png"],
+  "https://matotam.itch.io/access-gun-file-root",
+  "Go to game"
+);});
+document.getElementById('Energizer').addEventListener('click', function(event) {SpawnPage(
+  "Energizer 3D",
+  "Developer/Designer",
+  "A game made for the 32 bit jam in 2022. I made this together with my brother, which was his first game jam. This jam lasted 2 weeks, so we took it at a leisurely, more healthy pace. <br> The goal of the jam was to create a game that felt like a ps1 or N64 game. We emulated this feel by using low resolution textures and low poly models. <br> I wanted the janky N64 feel as well, so although I am satisfied with the movement, I made the camera extra convoluted and a little difficult to work with on purpose. <br> Besides the whole design and development, I am also responsible for a few art assets: the particle effects and the skybox.",
+  ["images/Projects/Energizer1.png","images/Projects/Energizer2.png","images/Projects/Energizer3.png","images/Projects/Energizer4.png"],
+  "https://smos-bois.itch.io/energizer-3d",
+  "Go to game"
+);});
+document.getElementById('PackCheck').addEventListener('click', function(event) {SpawnPage(
+  "Pack Check",
+  "Developer/Designer",
+  "A game made for the Quarantine jam in 2020. I made this together with 1 other artist (a student friend of mine). This was made in 2 days. <br> I made this in the first year I started coding. I was still following the Game Designer course at the time (instead of the Game Development course). Even though it was made a while ago, I believe it holds up really well. The game plays well, and there are some fun design choices we made, such as the customers getting visibly nervous when asked about illegal items. <br>",
+  ["images/Projects/PackCheck1.jpg","images/Projects/PackCheck4.jpg","images/Projects/PackCheck2.jpg","images/Projects/PackCheck3.jpg"],
+  "https://smos-bois.itch.io/pack-check",
+  "Go to game"
+);});
+document.getElementById('Knowhere').addEventListener('click', function(event) {SpawnPage(
+  "The Knowhere Express",
+  "Developer",
+  "A game made for the Global Game Jam in 2022. The jam lasted 2 days. I made this with a very large group, the maximum amount of people for one group allowed. 2 game designers, 4 artists, and 1 sound designer, with me as the sole developer. <br> The game as a whole is an experimental take on the afterlife. We wanted to focus on getting the feeling right. We mixed high detail assets with low detail assets, to create a weird, unusual feeling. <br> There are parts of the game that are lacking in quality, but that's an expected result during game jams.",
+  ["images/Projects/Knowhere1.png","images/Projects/Knowhere2.png","images/Projects/Knowhere3.png","images/Projects/Knowhere4.png"],
+  "https://mirnavsteenbergen.itch.io/the-knowhere-express",
+  "Go to game"
+);});
+document.getElementById('Whole').addEventListener('click', function(event) {SpawnPage(
+  "The (W)hole",
+  "Developer/Designer/Writer",
+  "The (W)hole was a school project in the first year of my study. It took several weeks, with a group of 3 artists, and 3 designers, where I was one of the designers. <br> Although this was when I wanted to focus on development, a lot of the development has to be credited to Pim van Wieren. I worked on the dialogue system and the movement. I was also in charge of the writing. Where we did the overall story as a group, I wrote all of the dialogue (and made the sounds), and designed the puzzles that correspond with them.",
+  ["images/Projects/Whole1.png","images/Projects/Whole2.png","images/Projects/Whole3.png","images/Projects/Whole4.png"],
+  "https://aronbg.itch.io/hole",
+  "Go to game"
+);});

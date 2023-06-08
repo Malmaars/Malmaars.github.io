@@ -278,6 +278,7 @@ iconP{
 .projectBlockParent{
     width: 49%;
     display: inline-block;
+    margin-bottom: 20px;
 }
 
 .projectBlock{
@@ -373,7 +374,7 @@ iconP{
     width: 0%;
     height: 0%;
     background-color: #222;
-    overflow: none;
+    overflow: hidden;
     outline: solid white 2px;
 
     transition: all 0.4s ease;
@@ -392,7 +393,7 @@ iconP{
     margin: 0; 
     display: inline-block;
     margin-right: -4px;
-    margin-bottom: -4px;   
+    margin-bottom: -4px;
 }
 
 .popUpRight{
