@@ -11,7 +11,7 @@ function SpawnPage(title, roles, description, images, link, buttonText){
     SpawnHorizontalPage(title, roles, description, images, link, buttonText);
   }
   else{
-    SpawnVerticalPage(title, roles, description, images, link, buttonText);    
+    SpawnHorizontalPage(title, roles, description, images, link, buttonText);    
   }
 }
 
@@ -32,6 +32,8 @@ async function SpawnHorizontalPage(title, roles, description, images, link, butt
 
   //for now we'll do it with a fixed width
 
+
+
   const mediaWidth = document.documentElement.clientWidth;
 
   //turns out a bunch of if-elses is the most efficient way to do this? I know, I don't like it either
@@ -40,7 +42,9 @@ async function SpawnHorizontalPage(title, roles, description, images, link, butt
   if(mediaWidth < 1360 && mediaWidth > 1150){ currentPopUp.style.width = "1000px";} else
   if(mediaWidth < 1150 && mediaWidth > 960){ currentPopUp.style.width = "800px";} else
   if(mediaWidth < 960 && mediaWidth > 680){ currentPopUp.style.width = "600px";} else
-  { currentPopUp.style.width = "400px";}
+  if(mediaWidth < 680 || mediaWidth == null) { currentPopUp.style.width = "400px";}
+
+  console.log("creating popUp");
 
   var popUpImageParent = document.createElement('div');
   popUpImageParent.className = "popUpImage";
@@ -190,6 +194,10 @@ function preload() {
         images[i] = new Image();
         images[i].src = preload.arguments[i];
     }
+}
+
+function isMobileDevice() {
+  return /Mobi|Android|iPhone|iPad|iPod|Windows Phone|BlackBerry|Mobile/i.test(navigator.userAgent);
 }
 
 preload(
