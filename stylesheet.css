@@ -386,6 +386,22 @@ iconP{
 
     transition: all 0.4s ease;
 }
+.projectPopUpVertical{
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    margin: auto;
+    z-index: 20;
+    width: 0%;
+    height: 0%;
+    background-color: #222;
+    overflow: hidden;
+    outline: solid white 2px;
+
+    transition: all 0.4s ease;
+}
 
 .popUpImage{
     width: 58.5%;
@@ -404,6 +420,21 @@ iconP{
     margin-bottom: -4px;
 }
 
+.popUpImageVertical{
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease;
+    overflow: hidden;
+}
+
+.popUpImageVertical img{
+    width: 50%;
+    margin: 0; 
+    display: inline-block;
+    margin-right: -4px;
+    margin-bottom: -4px;
+}
+
 .popUpRight{
     width: 33.5%;
     height: 100%;
@@ -415,6 +446,20 @@ iconP{
 }
 
 .popUpRight a{
+    text-decoration: none !important;
+}
+
+.popUpBottom{
+    width: 80%;
+    height: auto;
+    padding: 5px 2.5% 5px 0px;
+    bottom: 50px;
+    transition: opacity 0.5s ease;
+    overflow: auto;
+    margin: auto;
+}
+
+.popUpBottom a{
     text-decoration: none !important;
 }
 
@@ -504,15 +549,15 @@ iconP{
   }
   @media only screen and (min-width: 0px) {
     /* For desktop: */
-    .projectBlockParent{display: block; margin: 0 auto; width: 100%;}
+    .projectBlockParent{display: block; margin: 0 auto; width: 100%; margin-bottom: 20px;}
  }
   @media only screen and (min-width: 985px) {
     /* For desktop: */
-    .projectBlockParent{display: block; margin: 0 auto; width: 100%;}
+    .projectBlockParent{display: block; margin: 0 auto; width: 100%; margin-bottom: 20px;}
  }
   @media only screen and (min-width: 1800px) {
     /* For desktop: */
-    .projectBlockParent{display: inline-block; margin: auto; width: 49%;}
+    .projectBlockParent{display: inline-block; margin: auto; width: 49%; margin-bottom: 20px;}
  }
  
 

@@ -11,7 +11,7 @@ function SpawnPage(title, roles, description, images, link, buttonText){
     SpawnHorizontalPage(title, roles, description, images, link, buttonText);
   }
   else{
-    SpawnHorizontalPage(title, roles, description, images, link, buttonText);    
+    SpawnVerticalPage(title, roles, description, images, link, buttonText);    
   }
 }
 
@@ -34,7 +34,7 @@ async function SpawnHorizontalPage(title, roles, description, images, link, butt
 
 
 
-  const mediaWidth = document.documentElement.clientWidth;
+  var mediaWidth = document.documentElement.clientWidth;
 
   //turns out a bunch of if-elses is the most efficient way to do this? I know, I don't like it either
   if(mediaWidth >= 1580){ currentPopUp.style.width = "1400px"; } else
@@ -130,7 +130,117 @@ async function SpawnHorizontalPage(title, roles, description, images, link, butt
 }
 
 async function SpawnVerticalPage(title, roles, description, images, link, buttonText){
+  if(currentPopUp != null){
+    return;
+  }
 
+  currentPopUp =  document.createElement('div');
+  currentPopUp.className = "projectPopUpVertical";
+  currentPopUp.setAttribute("id", "popUp");
+
+  //load the images and check their aspect ratio, this will determine the size of the box
+  
+  //1: get the width of the popup
+  //1.1: set the width of the popup based on the screen size
+
+  //for now we'll do it with a fixed width
+
+
+
+  var mediaHeight = document.documentElement.clientHeight;
+
+  //turns out a bunch of if-elses is the most efficient way to do this? I know, I don't like it either
+  if(mediaHeight >= 1580){ currentPopUp.style.height = "1400px"; } else
+  if(mediaHeight < 1580 && mediaHeight > 1360){ currentPopUp.style.height = "1200px";} else
+  if(mediaHeight < 1360 && mediaHeight > 1150){ currentPopUp.style.height = "1000px";} else
+  if(mediaHeight < 1150 && mediaHeight > 960){ currentPopUp.style.height = "800px";} else
+  if(mediaHeight < 960 && mediaHeight > 680){ currentPopUp.style.height = "600px";} else
+  if(mediaHeight < 680 || mediaHeight == null) { currentPopUp.style.height = "400px";}
+
+  console.log("creating popUp");
+
+  var popUpImageParent = document.createElement('div');
+  popUpImageParent.className = "popUpImageVertical";
+  currentPopUp.appendChild(popUpImageParent);
+
+  popUpImageParent.style.opacity = "0";
+
+  var popUpTextParent = document.createElement('div');
+  popUpTextParent.className = "popUpBottom";
+  currentPopUp.appendChild(popUpTextParent);
+
+  popUpTextParent.style.opacity = "0";
+
+  var titleElement = document.createElement('h3');
+  titleElement.textContent = title;
+  popUpTextParent.appendChild(titleElement);
+
+  var roleElement = document.createElement("div");
+  roleElement.className = "roleText";
+  roleElement.textContent = roles;
+  popUpTextParent.appendChild(roleElement);
+
+  var descriptionElement = document.createElement("div");
+  descriptionElement.className = "popUpDescription";
+  descriptionElement.innerHTML = description;
+  popUpTextParent.appendChild(descriptionElement);
+
+  //button
+  if(buttonText != null && link != null){
+    var buttonDiv = document.createElement("div");
+    buttonDiv.className = "popUpButton"
+    var buttonLink = document.createElement("a");
+    buttonLink.href = link;
+    buttonLink.target = "blank";
+    var innerButtonDiv = document.createElement("div");
+    innerButtonDiv.className = "popUpLink";
+    innerButtonDiv.innerText = buttonText;
+
+    buttonLink.appendChild(innerButtonDiv);
+    buttonDiv.appendChild(buttonLink);
+    popUpTextParent.appendChild(buttonDiv);
+  }
+
+  var closeButton = document.createElement("div");
+  closeButton.className = "popUpClose";
+
+  var closeImage = document.createElement('img');
+  closeImage.className = 'centered';
+  closeImage.src = "images/SimpleCrossGrey.png";
+  closeButton.appendChild(closeImage);
+
+  currentPopUp.appendChild(closeButton);
+  closeButton.addEventListener('click',DeletePopUp);
+
+  let img;
+  
+    //2: calculate the width of the image side
+    for (let i = 0; i < images.length; i++){
+      img = document.createElement('img');
+      img.src = images[i];
+      popUpImageParent.appendChild(img);
+    }
+
+
+  var imgWidth = img.naturalWidth;
+  var imgHeight = img.naturalHeight;
+
+  //3: get the ratio of the images
+  var imgRatio = imgWidth / imgHeight;
+
+  //4: set the width of the images to 50% the container, than calculate their actual height
+  var parentWidth = parseInt(currentPopUp.style.width) * 0.585;
+  var newWidth = parentWidth / imgRatio  
+
+  //5: set the height of the popup to 2x the image height 
+  document.body.insertBefore(currentPopUp,document.getElementById("border"));
+  await delay(10);
+  SetSizeInPixels(800, parseInt(currentPopUp.style.height));
+  currentPopUp.style.height = "auto";
+  await delay(500);
+  popUpImageParent.style.opacity = "1";
+  popUpTextParent.style.opacity = "1";
+  popUpExists = true;
 }
 
 function SetSizeInPercentage(percentage){
@@ -149,8 +259,15 @@ async function DeletePopUp(){
     return;
   }
 
+  if(currentPopUp.getElementsByClassName("popUpImage").length > 0){
   currentPopUp.getElementsByClassName("popUpImage")[0].style.opacity = "0";
   currentPopUp.getElementsByClassName("popUpRight")[0].style.opacity = "0";
+  }
+
+  if(currentPopUp.getElementsByClassName("popUpImageVertical").length > 0){
+  currentPopUp.getElementsByClassName("popUpImageVertical")[0].style.opacity = "0";
+  currentPopUp.getElementsByClassName("popUpBottom")[0].style.opacity = "0";
+  }
 
 
   await delay(500);
@@ -194,6 +311,7 @@ function preload() {
         images[i] = new Image();
         images[i].src = preload.arguments[i];
     }
+    console.log("preloaded content");
 }
 
 function isMobileDevice() {
