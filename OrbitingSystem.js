@@ -131,6 +131,8 @@ function Animate(){
       planets[i].UpdatePlanet();
   }
 
+  console.log(document.documentElement.clientWidth);
+
   requestAnimationFrame(Animate);
 }
 Animate();

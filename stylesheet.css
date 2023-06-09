@@ -275,6 +275,11 @@ iconP{
     cursor: pointer;
 }
 
+.projectContent{
+    display: block; 
+    width: 95%;
+}
+
 .projectBlockParent{
     width: 49%;
     display: inline-block;
@@ -307,6 +312,8 @@ iconP{
     position: relative;
     display: flex;
     height: 250px;
+    width: 400px;
+    margin: auto;
 }
 
 .projectImage img{
@@ -386,6 +393,7 @@ iconP{
     margin-right: 4.5%;
 
     transition: opacity 0.5s ease;
+    overflow: hidden;
 }
 
 .popUpImage img{
@@ -398,9 +406,12 @@ iconP{
 
 .popUpRight{
     width: 33.5%;
+    height: 100%;
     float: left;
     padding: 5px 2.5% 5px 0px;
+    bottom: 50px;
     transition: opacity 0.5s ease;
+    overflow: auto;
 }
 
 .popUpRight a{
@@ -413,6 +424,7 @@ iconP{
 
 .popUpButton{
     padding-top: 30px;
+    padding-bottom: 40px;
 }
 
 .popUpLink{
@@ -490,9 +502,19 @@ iconP{
 @media only screen and (min-width: 600px) {
     /* For tablets: */
   }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 0px) {
     /* For desktop: */
+    .projectBlockParent{display: block; margin: 0 auto; width: 100%;}
  }
+  @media only screen and (min-width: 985px) {
+    /* For desktop: */
+    .projectBlockParent{display: block; margin: 0 auto; width: 100%;}
+ }
+  @media only screen and (min-width: 1800px) {
+    /* For desktop: */
+    .projectBlockParent{display: inline-block; margin: auto; width: 49%;}
+ }
+ 
 
 .solarSystem{
     left: 45vw;

@@ -65,6 +65,9 @@ function ResizePage(){
   var windowWidth = window.innerWidth || document.documentElement.clientWidth;
   var windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
+  var windowClientWidth = document.documentElement.clientWidth;
+  console.log(windowClientWidth);
+
   //also do some stuff with the buttons, maybe even change the stylesheet
 
   //get the close button
@@ -74,7 +77,7 @@ function ResizePage(){
   }
   const border = document.getElementById("border");
 
-  if(windowHeight < windowWidth){
+  if(windowHeight < windowWidth && windowClientWidth > 985){
     if(openPage!=null)
     {
     openPage.style.width = "45%";
