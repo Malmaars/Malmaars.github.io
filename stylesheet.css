@@ -562,7 +562,7 @@ iconP{
  }
 
  @media (min-height: 0px) and (orientation:portrait) {
-    .contentText{font-size: 16px;}
+    .contentText{font-size: 30px;}
  }
 
   @media (min-width: 985px) {
