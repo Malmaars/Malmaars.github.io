@@ -558,7 +558,7 @@ iconP{
     .projectBlockParent{display: block; margin: 0 auto; width: 100%; margin-bottom: 20px;}
  }
   @media only screen and (min-width: 0px) and (orientation:landscape) {
-    .contentText{font-size: 10px;}
+    .contentText{font-size: 16px;}
  }
 
  @media only screen and (min-height: 0px) and (orientation:portrait) {
