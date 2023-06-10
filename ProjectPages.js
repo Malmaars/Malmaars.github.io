@@ -147,7 +147,8 @@ async function SpawnVerticalPage(title, roles, description, images, link, button
   if(mediaWidth < 1360 && mediaWidth > 1150){ currentPopUp.style.width = "1000px";} else
   if(mediaWidth < 1150 && mediaWidth > 960){ currentPopUp.style.width = "800px";} else
   if(mediaWidth < 960 && mediaWidth > 680){ currentPopUp.style.width = "600px";} else
-  if(mediaWidth < 680 || mediaWidth == null) { currentPopUp.style.width = "400px";}
+  if(mediaWidth < 680 && mediaWidth > 480) { currentPopUp.style.width = "400px";} else
+  if(mediaWidth < 480 || mediaWidth == null) { currentPopUp.style.width = "300px";}
 
 
   console.log("creating popUp");
