@@ -245,6 +245,16 @@ iconP{
     overflow: visible;
 }
 
+.pageTitle{
+    font-size: 100px; 
+    text-align: center; 
+    font-family: 'Kanit', sans-serif;
+}
+
+.contentText{
+    font-size: 10px;
+}
+
 .pageContent{
     max-width: 100%;
     max-height: 100%;
@@ -544,21 +554,33 @@ iconP{
     width: 100%;
   }
   */
-@media only screen and (min-width: 600px) {
-    /* For tablets: */
-  }
   @media only screen and (min-width: 0px) {
-    /* For desktop: */
     .projectBlockParent{display: block; margin: 0 auto; width: 100%; margin-bottom: 20px;}
  }
+  @media only screen and (min-width: 0px) and (orientation:landscape) {
+    .contentText{font-size: 10px;}
+ }
+
+ @media only screen and (min-height: 0px) and (orientation:portrait) {
+    .contentText{font-size: 20px;}
+ }
+
   @media only screen and (min-width: 985px) {
-    /* For desktop: */
     .projectBlockParent{display: block; margin: 0 auto; width: 100%; margin-bottom: 20px;}
  }
   @media only screen and (min-width: 1800px) {
-    /* For desktop: */
     .projectBlockParent{display: inline-block; margin: auto; width: 49%; margin-bottom: 20px;}
+  }
+
+ @media only screen and (min-width: 1800px) and (orientation:landscape) {
+    .contentText{font-size: 20px;}
  }
+ @media only screen and (min-height: 1800px) and (orientation:portrait) {
+    .contentText{font-size: 30px;}
+ }
+
+ 
+
  
 
 .solarSystem{
