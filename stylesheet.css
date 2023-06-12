@@ -560,6 +560,7 @@ iconP{
   */
   @media (min-width: 0px) {
     .projectBlockParent{display: block; margin: 0 auto; width: 100%; margin-bottom: 20px;}
+    .projectImage{left: 0%;}
  }
   @media (min-width: 0px) and (orientation:landscape) {
     .contentText{font-size: 20px;}
@@ -583,6 +584,16 @@ iconP{
  }
  @media (min-height: 1800px) and (orientation:portrait) {
     .contentText{font-size: 30px;}
+ }
+
+ @media (max-width: 400px){
+    .projectImage{left: -20px;}
+ }
+ @media (max-width: 360px){
+    .projectImage{left: -30px;}
+ }
+ @media (max-width: 340px){
+    .projectImage{left: -40px;}
  }
 
  
