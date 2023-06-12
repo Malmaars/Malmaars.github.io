@@ -134,15 +134,15 @@ body{
 iconP{
     margin-left: 1vw;
     font-family: 'Cascadia Code', sans-serif;
-    font-size: 2vw;
+    font-size: 100%;
     color: white;
 }
 
 .pageIcon{
     display: flex;
     align-items: center;;
-    width: 150%;
-    height: 6vw;
+    width: 550px;
+    height: 110px;
     background-color: #222222;
     /*border: solid;
     border-color: white;
@@ -152,8 +152,8 @@ iconP{
 }
 
 .pageIcon img{
-    width: 5vw;
-    height: 5vw;
+    height: 80%;
+    width: auto;
     margin-left: 0.5vw;
 }
 
@@ -561,6 +561,7 @@ iconP{
   @media (min-width: 0px) {
     .projectBlockParent{display: block; margin: 0 auto; width: 100%; margin-bottom: 20px;}
     .projectImage{left: 0%;}
+    .pageIcon{width: 150px; height: 45px;}
  }
   @media (min-width: 0px) and (orientation:landscape) {
     .contentText{font-size: 20px;}
@@ -571,6 +572,38 @@ iconP{
     .contentText{font-size: 16px;}
     .pageTitle{font-size: 50px;}
  }
+
+  /* pageIcon screen size compatibility*/
+  @media (min-width: 340px) {
+    .pageIcon{width: 160px; height: 50px;}
+    iconP{font-size: 15px;}
+ }
+  @media (min-width: 400px) {
+    .pageIcon{width: 180px; height: 50px;}
+ }
+  @media (min-width: 500px) {
+    .pageIcon{width: 200px; height: 50px;}
+    iconP{font-size: 15px;}
+}
+  @media (min-width: 600px) {
+    .pageIcon{width: 215px; height: 60px;}
+ }
+  @media (min-width: 700px) {
+    .pageIcon{width: 250px; height: 60px;}
+ }
+  @media (min-width: 800px) {
+    .pageIcon{width: 340px; height: 80px;}
+    iconP{font-size: 30px;}
+ }
+  @media (min-width: 1200px) {
+    .pageIcon{width: 430px; height: 90px;}
+    iconP{font-size: 35px;}
+ }
+ @media (min-width: 1800px){
+    .pageIcon{width: 520px; height: 115px;}
+    iconP{font-size: 40px;}
+ }
+
 
   @media (min-width: 985px) {
     .projectBlockParent{display: block; margin: 0 auto; width: 100%; margin-bottom: 20px;}
@@ -595,6 +628,7 @@ iconP{
  @media (max-width: 340px){
     .projectImage{left: -40px;}
  }
+
 
  
 
