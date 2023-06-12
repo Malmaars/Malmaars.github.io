@@ -553,6 +553,29 @@ iconP{
     transform: scaleX(-1) scaleY(-1);
 }
 
+.backToMain{
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    height: 25px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    outline: solid white 1px;
+    background-color: #000;
+    z-index: 30;
+
+    transition: all 0.5s ease;
+}
+
+.backToMain p{
+    font-family: 'Cascadia Code', sans-serif;
+    margin: auto;
+    font-size: 18px;
+
+}
+
 /* For mobile phones:
 [class*="col-"] {
     width: 100%;
@@ -623,16 +646,11 @@ iconP{
     .projectImage{left: -20px;}
  }
  @media (max-width: 360px){
-    .projectImage{left: -30px;}
+    .projectImage{left: -35px;}
  }
  @media (max-width: 340px){
     .projectImage{left: -40px;}
- }
-
-
- 
-
- 
+ } 
 
 .solarSystem{
     left: 45vw;
