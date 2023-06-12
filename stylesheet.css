@@ -258,7 +258,7 @@ iconP{
 .pageContent{
     max-width: 100%;
     max-height: 100%;
-    overflow: auto;
+    overflow-y: auto;
     margin-top: -6vh;
 }
 
