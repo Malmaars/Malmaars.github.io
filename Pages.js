@@ -69,6 +69,7 @@ function ClosePage(element){
   }
   openPage = null;
   UnFocus();
+  ResizePage();
 }
 
 function ResizePage(){
@@ -108,10 +109,13 @@ function ResizePage(){
     openPage.style.width = "100%"
     openPage.style.left = "0%";
     closeButton.style.marginRight = "4vw";
-    }
-    border.style.height= "90vh";
-
     backToMain.style.marginBottom = "0px";
+    }
+    else{
+      backToMain.style.marginBottom = "-30px";
+    }
+
+    border.style.height= "90vh";
   }
 }
 
