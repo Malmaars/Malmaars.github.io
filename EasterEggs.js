@@ -1,0 +1,1 @@
+//All easter eggs will be images, that appear in the form of a popup.

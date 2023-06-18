@@ -3,19 +3,19 @@ var popUpExists = false;
 
 //The plan is to use this function to create the pop-up. In the parameters we can pass the unique information,
 //Such as the title, images, description, and link
-function SpawnPage(title, roles, description, images, link, buttonText){
+function SpawnPage(title, roles, disciplines, description, images, link, buttonText){
   var windowWidth = window.innerWidth || document.documentElement.clientWidth;
   var windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
   if(windowHeight < windowWidth){
-    SpawnHorizontalPage(title, roles, description, images, link, buttonText);
+    SpawnHorizontalPage(title, roles, disciplines, description, images, link, buttonText);
   }
   else{
-    SpawnVerticalPage(title, roles, description, images, link, buttonText);    
+    SpawnVerticalPage(title, roles, disciplines, description, images, link, buttonText);    
   }
 }
 
-async function SpawnHorizontalPage(title, roles, description, images, link, buttonText){
+async function SpawnHorizontalPage(title, roles, disciplines, description, images, link, buttonText){
 
   if(currentPopUp != null){
     return;
@@ -62,6 +62,11 @@ async function SpawnHorizontalPage(title, roles, description, images, link, butt
   roleElement.className = "roleText";
   roleElement.textContent = roles;
   popUpTextParent.appendChild(roleElement);
+
+  var disciplineElement = document.createElement("div");
+  disciplineElement.className = "disciplineText";
+  disciplineElement.textContent = disciplines;
+  popUpTextParent.appendChild(disciplineElement);
 
   var descriptionElement = document.createElement("div");
   descriptionElement.className = "popUpDescription";
@@ -125,7 +130,7 @@ async function SpawnHorizontalPage(title, roles, description, images, link, butt
   popUpExists = true;
 }
 
-async function SpawnVerticalPage(title, roles, description, images, link, buttonText){
+async function SpawnVerticalPage(title, roles, disciplines, description, images, link, buttonText){
   if(currentPopUp != null){
     return;
   }
@@ -173,6 +178,11 @@ async function SpawnVerticalPage(title, roles, description, images, link, button
   roleElement.className = "roleText";
   roleElement.textContent = roles;
   popUpTextParent.appendChild(roleElement);
+
+  var disciplineElement = document.createElement("div");
+  disciplineElement.className = "disciplineText";
+  disciplineElement.textContent = disciplines;
+  popUpTextParent.appendChild(disciplineElement);
 
   var descriptionElement = document.createElement("div");
   descriptionElement.className = "popUpDescription";
@@ -330,13 +340,15 @@ preload(
   "images/Projects/Energizer1.png","images/Projects/Energizer2.png","images/Projects/Energizer3.png","images/Projects/Energizer4.png",
   "images/Projects/PackCheck1.jpg","images/Projects/PackCheck4.jpg","images/Projects/PackCheck2.jpg","images/Projects/PackCheck3.jpg",
   "images/Projects/Knowhere1.png","images/Projects/Knowhere2.png","images/Projects/Knowhere3.png","images/Projects/Knowhere4.png",
-  "images/Projects/Whole1.png","images/Projects/Whole2.png","images/Projects/Whole3.png","images/Projects/Whole4.png"
+  "images/Projects/Whole1.png","images/Projects/Whole2.png","images/Projects/Whole3.png","images/Projects/Whole4.png",
+  "images/Projects/ThreeJsSite1.png", "images/Projects/ThreeJsSite2.png", "images/Projects/ThreeJsSite3.png", "images/Projects/ThreeJsSite4.png"
 );
 
 
 document.getElementById('ThrowBot').addEventListener('click', function(event) {SpawnPage(
   "ThrowBot",
   "Developer/Designer",
+  "C# - Unity",
   "A game made for the speed jam in 2023. It was made in 3 days, with the team consisting of 4 members. 2 artists, 1 sound designer and me as the developer and game designer. <br> The goal of the jam was to make a game focused on speedrunning.",
   ["images/Projects/THROWBOT_20title_20screen.jpg","images/Projects/ThrowBotScreenshot.png","images/Projects/ThrowBotGameplay.gif","images/Projects/Cinematic_20Frame_203.jpg"],
   "https://matotam.itch.io/throwbot",
@@ -345,6 +357,7 @@ document.getElementById('ThrowBot').addEventListener('click', function(event) {S
 document.getElementById('GunFile').addEventListener('click', function(event) {SpawnPage(
   "Gun File: Root",
   "Developer/Designer",
+  "C# - Unity",
   "A game made for the global game jam in 2023. The jam lasted 2 days. I made it in collaboration with one artist, making the team called <b>Ant Inferno</b>. <br> The game is very experimental, and overshot it's small scope a little, but I'm proud of it nonetheless. The theme of the jam was <b>roots</b>, and we tried to make the interpretation of the theme unique.",
   ["images/Projects/AntInferno.png","images/Projects/GunFileMain.png","images/Projects/GunFile2.png","images/Projects/GunFile3.png"],
   "https://matotam.itch.io/access-gun-file-root",
@@ -353,6 +366,7 @@ document.getElementById('GunFile').addEventListener('click', function(event) {Sp
 document.getElementById('Energizer').addEventListener('click', function(event) {SpawnPage(
   "Energizer 3D",
   "Developer/Designer",
+  "C# - Unity",
   "A game made for the 32 bit jam in 2022. I made this together with my brother, which was his first game jam. This jam lasted 2 weeks, so we took it at a leisurely, more healthy pace. <br> The goal of the jam was to create a game that felt like a ps1 or N64 game. We emulated this feel by using low resolution textures and low poly models. <br> I wanted the janky N64 feel as well, so although I am satisfied with the movement, I made the camera extra convoluted and a little difficult to work with on purpose. <br> Besides the whole design and development, I am also responsible for a few art assets: the particle effects and the skybox.",
   ["images/Projects/Energizer1.png","images/Projects/Energizer2.png","images/Projects/Energizer3.png","images/Projects/Energizer4.png"],
   "https://smos-bois.itch.io/energizer-3d",
@@ -361,6 +375,7 @@ document.getElementById('Energizer').addEventListener('click', function(event) {
 document.getElementById('PackCheck').addEventListener('click', function(event) {SpawnPage(
   "Pack Check",
   "Developer/Designer",
+  "C# - Unity",
   "A game made for the Quarantine jam in 2020. I made this together with 1 other artist (a student friend of mine). This was made in 2 days. <br> I made this in the first year I started coding. I was still following the Game Designer course at the time (instead of the Game Development course). Even though it was made a while ago, I believe it holds up really well. The game plays well, and there are some fun design choices we made, such as the customers getting visibly nervous when asked about illegal items. <br>",
   ["images/Projects/PackCheck1.jpg","images/Projects/PackCheck4.jpg","images/Projects/PackCheck2.jpg","images/Projects/PackCheck3.jpg"],
   "https://smos-bois.itch.io/pack-check",
@@ -369,6 +384,7 @@ document.getElementById('PackCheck').addEventListener('click', function(event) {
 document.getElementById('Knowhere').addEventListener('click', function(event) {SpawnPage(
   "The Knowhere Express",
   "Developer",
+  "C# - Unity",
   "A game made for the Global Game Jam in 2022. The jam lasted 2 days. I made this with a very large group, the maximum amount of people for one group allowed. 2 game designers, 4 artists, and 1 sound designer, with me as the sole developer. <br> The game as a whole is an experimental take on the afterlife. We wanted to focus on getting the feeling right. We mixed high detail assets with low detail assets, to create a weird, unusual feeling. <br> There are parts of the game that are lacking in quality, but that's an expected result during game jams.",
   ["images/Projects/Knowhere1.png","images/Projects/Knowhere2.png","images/Projects/Knowhere3.png","images/Projects/Knowhere4.png"],
   "https://mirnavsteenbergen.itch.io/the-knowhere-express",
@@ -377,8 +393,18 @@ document.getElementById('Knowhere').addEventListener('click', function(event) {S
 document.getElementById('Whole').addEventListener('click', function(event) {SpawnPage(
   "The (W)hole",
   "Developer/Designer/Writer",
+  "C# - Unity",
   "The (W)hole was a school project in the first year of my study. It took several weeks, with a group of 3 artists, and 3 designers, where I was one of the designers. <br> Although this was when I wanted to focus on development, a lot of the development has to be credited to Pim van Wieren. I worked on the dialogue system and the movement. I was also in charge of the writing. Where we did the overall story as a group, I wrote all of the dialogue (and made the sounds), and designed the puzzles that correspond with them.",
   ["images/Projects/Whole1.png","images/Projects/Whole2.png","images/Projects/Whole3.png","images/Projects/Whole4.png"],
   "https://aronbg.itch.io/hole",
   "Go to game"
+);});
+document.getElementById('ThreeJs').addEventListener('click', function(event) {SpawnPage(
+  "Three Js Site",
+  "Everything",
+  "ThreeJS - HTML - CSS - Javascript",
+  "Before making the site you're on right now, I wanted to make something even more interactive, more engaging. I wanted to make a 3D game environment within a site. I thought I could accomplish this by using the language three js, which I learned specifically for this site. <br> After pouring a lot of hours into the site, which included modeling all assets and making my own barebones physics system, I did some playtesting. It turned out not every device could handle the website, and it often got stuck loading. <br> I decided to kill my darlings, and start a new website (this one).",
+  ["images/Projects/ThreeJsSite1.png","images/Projects/ThreeJsSite2.png","images/Projects/ThreeJsSite3.png","images/Projects/ThreeJsSite4.png"],
+  "https://malmaars.github.io/threejs-doneright/",
+  "Go to prototype"
 );});
