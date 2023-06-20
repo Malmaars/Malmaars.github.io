@@ -39,6 +39,11 @@ p{
     font-size: 20px;
 }
 
+.pLink{
+    font: inherit;
+    font-size: 20px;
+}
+
 a{
     font-family: 'Cascadia Code', sans-serif;
     color: cornflowerblue;
@@ -253,6 +258,7 @@ iconP{
 
 .contentText{
     font-size: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .pageContent{
