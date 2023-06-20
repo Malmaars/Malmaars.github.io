@@ -335,12 +335,12 @@ function isMobileDevice() {
 }
 
 preload(
-  "images/Projects/THROWBOT_20title_20screen.jpg","images/Projects/ThrowBotScreenshot.png","images/Projects/ThrowBotGameplay.gif","images/Projects/Cinematic_20Frame_203.jpg",
+  "images/Projects/THROWBOT_20title_20screen.jpg","images/Projects/ThrowBotScreenshot.jpg","images/Projects/ThrowBotGameplay.gif","images/Projects/Cinematic_20Frame_203.jpg",
   "images/Projects/AntInferno.png","images/Projects/GunFile.gif","images/Projects/GunFile2.png","images/Projects/GunFile3.png",
   "images/Projects/Energizer.gif","images/Projects/Energizer2.png","images/Projects/Energizer3.png","images/Projects/Energizer4.png",
   "images/Projects/PackCheck1.jpg","images/Projects/PackCheck4.jpg","images/Projects/PackCheck2.jpg","images/Projects/PackCheck.gif",
-  "images/Projects/Knowhere1.png","images/Projects/Knowhere2.png","images/Projects/Train.gif","images/Projects/Knowhere4.png",
-  "images/Projects/Whole1.png","images/Projects/Whole.gif","images/Projects/Whole3.png","images/Projects/Whole4.png",
+  "images/Projects/Knowhere1.png","images/Projects/Knowhere2.png","images/Projects/Train.gif","images/Projects/Knowhere4.jpg",
+  "images/Projects/Whole1.jpg","images/Projects/Whole.gif","images/Projects/Whole3.jpg","images/Projects/Whole4.jpg",
   "images/Projects/ThreeJsSite1.png", "images/Projects/ThreeJs.gif", "images/Projects/ThreeJsSite3.png", "images/Projects/ThreeJsSite4.png",
   "images/Projects/Kwal2.png","images/Projects/Kwal.gif","images/Projects/Kwal3.png","images/Projects/Kwal4.png",
   "images/Projects/BrickBreaker1.png","images/Projects/BrickBreaker3.png","images/Projects/BrickBreaker2.gif","images/Projects/BrickBreaker4.png"
@@ -388,7 +388,7 @@ document.getElementById('Knowhere').addEventListener('click', function(event) {S
   "Developer",
   "C# - Unity",
   "A game made for the Global Game Jam in 2022. The jam lasted 2 days. I made this with a very large group, the maximum amount of people for one group allowed. 2 game designers, 4 artists, and 1 sound designer, with me as the sole developer. <br> The game as a whole is an experimental take on the afterlife. We wanted to focus on getting the feeling right. We mixed high detail assets with low detail assets, to create a weird, unusual feeling. <br> There are parts of the game that are lacking in quality, but that's an expected result during game jams.",
-  ["images/Projects/Knowhere1.png","images/Projects/Knowhere2.png","images/Projects/Train.gif","images/Projects/Knowhere4.png"],
+  ["images/Projects/Knowhere1.png","images/Projects/Knowhere2.png","images/Projects/Train.gif","images/Projects/Knowhere4.jpg"],
   "https://mirnavsteenbergen.itch.io/the-knowhere-express",
   "Go to game"
 );});
@@ -397,7 +397,7 @@ document.getElementById('Whole').addEventListener('click', function(event) {Spaw
   "Developer/Designer/Writer",
   "C# - Unity",
   "The (W)hole was a school project in the first year of my study. It took several weeks, with a group of 3 artists, and 3 designers, where I was one of the designers. <br> Although this was when I wanted to focus on development, a lot of the development has to be credited to Pim van Wieren. I worked on the dialogue system and the movement. I was also in charge of the writing. Where we did the overall story as a group, I wrote all of the dialogue (and made the sounds), and designed the puzzles that correspond with them.",
-  ["images/Projects/Whole1.png","images/Projects/Whole3.png","images/Projects/Whole.gif","images/Projects/Whole4.png"],
+  ["images/Projects/Whole1.jpg","images/Projects/Whole3.jpg","images/Projects/Whole.gif","images/Projects/Whole4.jpg"],
   "https://aronbg.itch.io/hole",
   "Go to game"
 );});
