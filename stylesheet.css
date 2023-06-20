@@ -440,6 +440,13 @@ iconP{
     margin-right: -4px;
     margin-bottom: -4px;
 }
+.popUpImage video{
+    width: 50%;
+    margin: 0; 
+    display: inline-block;
+    margin-right: -4px;
+    margin-bottom: -4px;
+}
 
 .popUpImageVertical{
     width: 100%;

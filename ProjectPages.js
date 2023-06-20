@@ -40,8 +40,6 @@ async function SpawnHorizontalPage(title, roles, disciplines, description, image
   if(mediaWidth < 960 && mediaWidth > 680){ currentPopUp.style.width = "600px";} else
   if(mediaWidth < 680 || mediaWidth == null) { currentPopUp.style.width = "400px";}
 
-  console.log("creating popUp");
-
   var popUpImageParent = document.createElement('div');
   popUpImageParent.className = "popUpImage";
   currentPopUp.appendChild(popUpImageParent);
@@ -104,7 +102,20 @@ async function SpawnHorizontalPage(title, roles, disciplines, description, image
   
     //2: calculate the width of the image side
     for (let i = 0; i < images.length; i++){
+      var fileExt = images[i].substr(images[i].lastIndexOf('.') + 1);
+      
+      if(fileExt == "webm"){
+        console.log("creating video");
+        img = document.createElement('video');
+        img.autoplay = true;
+        img.muted = true;
+        img.loop = true;
+        img.playsInline = true;
+      }else{
       img = document.createElement('img');
+      }
+
+      console.log(images[i]);
       img.src = images[i];
       popUpImageParent.appendChild(img);
     }
@@ -154,9 +165,6 @@ async function SpawnVerticalPage(title, roles, disciplines, description, images,
   if(mediaWidth < 960 && mediaWidth > 680){ currentPopUp.style.width = "600px";} else
   if(mediaWidth < 680 && mediaWidth > 480) { currentPopUp.style.width = "400px";} else
   if(mediaWidth < 480 || mediaWidth == null) { currentPopUp.style.width = "300px";}
-
-
-  console.log("creating popUp");
 
   var popUpImageParent = document.createElement('div');
   popUpImageParent.className = "popUpImageVertical";
@@ -220,6 +228,18 @@ async function SpawnVerticalPage(title, roles, disciplines, description, images,
   
     //2: calculate the width of the image side
     for (let i = 0; i < images.length; i++){
+      var fileExt = images[i].substr(images[i].lastIndexOf('.') + 1);
+      
+      if(fileExt == "webm"){
+        console.log("creating video");
+        img = document.createElement('video');
+        img.autoplay = true;
+        img.muted = true;
+        img.loop = true;
+        img.playsInline = true;
+      }else{
+      img = document.createElement('img');
+      }
       img = document.createElement('img');
       img.src = images[i];
       popUpImageParent.appendChild(img);
@@ -327,7 +347,6 @@ function preload() {
         images[i] = new Image();
         images[i].src = preload.arguments[i];
     }
-    console.log("preloaded content");
 }
 
 function isMobileDevice() {
@@ -335,15 +354,15 @@ function isMobileDevice() {
 }
 
 preload(
-  "images/Projects/THROWBOT_20title_20screen.jpg","images/Projects/ThrowBotScreenshot.jpg","images/Projects/ThrowBotGameplay.gif","images/Projects/Cinematic_20Frame_203.jpg",
-  "images/Projects/AntInferno.png","images/Projects/GunFile.gif","images/Projects/GunFile2.png","images/Projects/GunFile3.png",
-  "images/Projects/Energizer.gif","images/Projects/Energizer2.png","images/Projects/Energizer3.png","images/Projects/Energizer4.png",
-  "images/Projects/PackCheck1.jpg","images/Projects/PackCheck4.jpg","images/Projects/PackCheck2.jpg","images/Projects/PackCheck.gif",
-  "images/Projects/Knowhere1.png","images/Projects/Knowhere2.png","images/Projects/Train.gif","images/Projects/Knowhere4.jpg",
-  "images/Projects/Whole1.jpg","images/Projects/Whole.gif","images/Projects/Whole3.jpg","images/Projects/Whole4.jpg",
-  "images/Projects/ThreeJsSite1.png", "images/Projects/ThreeJs.gif", "images/Projects/ThreeJsSite3.png", "images/Projects/ThreeJsSite4.png",
-  "images/Projects/Kwal2.png","images/Projects/Kwal.gif","images/Projects/Kwal3.png","images/Projects/Kwal4.png",
-  "images/Projects/BrickBreaker1.png","images/Projects/BrickBreaker3.png","images/Projects/BrickBreaker2.gif","images/Projects/BrickBreaker4.png"
+  "images/Projects/THROWBOT_20title_20screen.jpg","images/Projects/ThrowBotScreenshot.jpg",/* "images/Projects/ThrowBotGameplay.gif", */"images/Projects/Cinematic_20Frame_203.jpg",
+  "images/Projects/AntInferno.png",/* "images/Projects/GunFile.gif", */"images/Projects/GunFile2.png","images/Projects/GunFile3.png",
+  /* "images/Projects/Energizer.gif", */"images/Projects/Energizer2.png","images/Projects/Energizer3.png","images/Projects/Energizer4.png",
+  "images/Projects/PackCheck1.jpg","images/Projects/PackCheck4.jpg","images/Projects/PackCheck2.jpg",/* "images/Projects/PackCheck.gif", */
+  "images/Projects/Knowhere1.png","images/Projects/Knowhere2.png",/* "images/Projects/Train.gif", */"images/Projects/Knowhere4.jpg",
+  "images/Projects/Whole1.jpg",/* "images/Projects/Whole.gif", */"images/Projects/Whole3.jpg","images/Projects/Whole4.jpg",
+  "images/Projects/ThreeJsSite1.png", /* "images/Projects/ThreeJs.gif", */ "images/Projects/ThreeJsSite3.png", "images/Projects/ThreeJsSite4.png",
+  "images/Projects/Kwal2.png",/* "images/Projects/Kwal.gif", */"images/Projects/Kwal3.png","images/Projects/Kwal4.png",
+  "images/Projects/BrickBreaker1.png","images/Projects/BrickBreaker3.png",/* "images/Projects/BrickBreaker2.gif", */"images/Projects/BrickBreaker4.png"
 );
 
 
@@ -352,7 +371,7 @@ document.getElementById('ThrowBot').addEventListener('click', function(event) {S
   "Developer/Designer",
   "C# - Unity",
   "A game made for the speed jam in 2023. It was made in 3 days, with the team consisting of 4 members. 2 artists, 1 sound designer and me as the developer and game designer. <br> The goal of the jam was to make a game focused on speedrunning.",
-  ["images/Projects/THROWBOT_20title_20screen.jpg","images/Projects/ThrowBotScreenshot.png","images/Projects/ThrowBotGameplay.gif","images/Projects/Cinematic_20Frame_203.jpg"],
+  ["images/Projects/THROWBOT_20title_20screen.jpg","images/Projects/ThrowBotScreenshot.png","images/Projects/ThrowBotGameplay.webm","images/Projects/Cinematic_20Frame_203.jpg"],
   "https://matotam.itch.io/throwbot",
   "Go to game"
 );});
@@ -361,7 +380,7 @@ document.getElementById('GunFile').addEventListener('click', function(event) {Sp
   "Developer/Designer",
   "C# - Unity",
   "A game made for the global game jam in 2023. The jam lasted 2 days. I made it in collaboration with one artist, making the team called <b>Ant Inferno</b>. <br> The game is very experimental, and overshot it's small scope a little, but I'm proud of it nonetheless. The theme of the jam was <b>roots</b>, and we tried to make the interpretation of the theme unique.",
-  ["images/Projects/AntInferno.png","images/Projects/GunFile2.png","images/Projects/GunFile.gif","images/Projects/GunFile3.png"],
+  ["images/Projects/AntInferno.png","images/Projects/GunFile2.png","images/Projects/GunFile.webm","images/Projects/GunFile3.png"],
   "https://matotam.itch.io/access-gun-file-root",
   "Go to game"
 );});
@@ -370,7 +389,7 @@ document.getElementById('Energizer').addEventListener('click', function(event) {
   "Developer/Designer",
   "C# - Unity",
   "A game made for the 32 bit jam in 2022. I made this together with my brother, which was his first game jam. This jam lasted 2 weeks, so we took it at a leisurely, more healthy pace. <br> The goal of the jam was to create a game that felt like a ps1 or N64 game. We emulated this feel by using low resolution textures and low poly models. <br> I wanted the janky N64 feel as well, so although I am satisfied with the movement, I made the camera extra convoluted and a little difficult to work with on purpose. <br> Besides the whole design and development, I am also responsible for a few art assets: the particle effects and the skybox.",
-  ["images/Projects/Energizer3.png","images/Projects/Energizer2.png","images/Projects/Energizer.gif","images/Projects/Energizer4.png"],
+  ["images/Projects/Energizer3.png","images/Projects/Energizer2.png","images/Projects/Energizer.webm","images/Projects/Energizer4.png"],
   "https://smos-bois.itch.io/energizer-3d",
   "Go to game"
 );});
@@ -379,7 +398,7 @@ document.getElementById('PackCheck').addEventListener('click', function(event) {
   "Developer/Designer",
   "C# - Unity",
   "A game made for the Quarantine jam in 2020. I made this together with 1 other artist (a student friend of mine). This was made in 2 days. <br> I made this in the first year I started coding. I was still following the Game Designer course at the time (instead of the Game Development course). Even though it was made a while ago, I believe it holds up really well. The game plays well, and there are some fun design choices we made, such as the customers getting visibly nervous when asked about illegal items. <br>",
-  ["images/Projects/PackCheck1.jpg","images/Projects/PackCheck4.jpg","images/Projects/PackCheck.gif","images/Projects/PackCheck2.jpg"],
+  ["images/Projects/PackCheck1.jpg","images/Projects/PackCheck4.jpg","images/Projects/PackCheck.webm","images/Projects/PackCheck2.jpg"],
   "https://smos-bois.itch.io/pack-check",
   "Go to game"
 );});
@@ -388,7 +407,7 @@ document.getElementById('Knowhere').addEventListener('click', function(event) {S
   "Developer",
   "C# - Unity",
   "A game made for the Global Game Jam in 2022. The jam lasted 2 days. I made this with a very large group, the maximum amount of people for one group allowed. 2 game designers, 4 artists, and 1 sound designer, with me as the sole developer. <br> The game as a whole is an experimental take on the afterlife. We wanted to focus on getting the feeling right. We mixed high detail assets with low detail assets, to create a weird, unusual feeling. <br> There are parts of the game that are lacking in quality, but that's an expected result during game jams.",
-  ["images/Projects/Knowhere1.png","images/Projects/Knowhere2.png","images/Projects/Train.gif","images/Projects/Knowhere4.jpg"],
+  ["images/Projects/Knowhere1.png","images/Projects/Knowhere2.png","images/Projects/Train.webm","images/Projects/Knowhere4.jpg"],
   "https://mirnavsteenbergen.itch.io/the-knowhere-express",
   "Go to game"
 );});
@@ -397,7 +416,7 @@ document.getElementById('Whole').addEventListener('click', function(event) {Spaw
   "Developer/Designer/Writer",
   "C# - Unity",
   "The (W)hole was a school project in the first year of my study. It took several weeks, with a group of 3 artists, and 3 designers, where I was one of the designers. <br> Although this was when I wanted to focus on development, a lot of the development has to be credited to Pim van Wieren. I worked on the dialogue system and the movement. I was also in charge of the writing. Where we did the overall story as a group, I wrote all of the dialogue (and made the sounds), and designed the puzzles that correspond with them.",
-  ["images/Projects/Whole1.jpg","images/Projects/Whole3.jpg","images/Projects/Whole.gif","images/Projects/Whole4.jpg"],
+  ["images/Projects/Whole1.jpg","images/Projects/Whole3.jpg","images/Projects/Whole.webm","images/Projects/Whole4.jpg"],
   "https://aronbg.itch.io/hole",
   "Go to game"
 );});
@@ -406,7 +425,7 @@ document.getElementById('ThreeJs').addEventListener('click', function(event) {Sp
   "Everything",
   "ThreeJS - HTML - CSS - Javascript",
   "Before making the site you're on right now, I wanted to make something even more interactive, more engaging. I wanted to make a 3D game environment within a site. I thought I could accomplish this by using the language three js, which I learned specifically for this site. <br> After pouring a lot of hours into the site, which included modeling all assets and making my own barebones physics system, I did some playtesting. It turned out not every device could handle the website, and it often got stuck loading. <br> I decided to kill my darlings, and start a new website (this one).",
-  ["images/Projects/ThreeJsSite1.png","images/Projects/ThreeJsSite3.png","images/Projects/ThreeJs.gif","images/Projects/ThreeJsSite4.png"],
+  ["images/Projects/ThreeJsSite1.png","images/Projects/ThreeJsSite3.png","images/Projects/ThreeJs.webm","images/Projects/ThreeJsSite4.png"],
   "https://malmaars.github.io/threejs-doneright/",
   "Go to prototype"
 );});
@@ -415,7 +434,7 @@ document.getElementById('Kwal').addEventListener('click', function(event) {Spawn
   "Everything",
   "Physical - Arduino - Unity - C#",
   "In the first year of college, one assignment was to make something using arduino. The assignment was very open-ended. I decided to make a special controller. The controller was based off jellyfish, which I had done extensive research on before. Like jellyfish would, the controller detects light. <br> This happens through multiple light sensors, which connect to the arduino, which then connects to a laptop. The received data translates to the game, where a jellyfish will move to a direction. The direction differs on where the controller receives light. <br> This is one of my personal favorite projects, I really enjoyed the physical work, building the controller. There was a plan to develop it further, but the emergence of covid stopped that.",
-  ["images/Projects/Kwal3.png","images/Projects/Kwal2.png","images/Projects/Kwal.gif","images/Projects/Kwal4.png"],
+  ["images/Projects/Kwal3.png","images/Projects/Kwal2.png","images/Projects/Kwal.webm","images/Projects/Kwal4.png"],
   "https://youtube.com/shorts/USdGcHCOjiE",
   "Go to video"
 );});
@@ -424,5 +443,5 @@ document.getElementById('BrickBreaker').addEventListener('click', function(event
   "Everything",
   "Physical",
   "I was tasked to, within a week, make a physical thing that has some kind of motion in it, and is not driven by electronics. I chose to make something interactive. I really like pinball machines, and I wondered why there wasn't a pinball machine about brickbreaker yet. It seems compatible on paper. So I set out to make just that, a brickbreaker pinball machine. <br> After testing some cardboard prototypes, the final prototype consisted of lasercut wood, with the addition of a spring (stolen from a pen) and a marble <a href='ILied.html' target='_blank' class='pLink'>(stolen from a child)</a>. The bricks are designed so they fall into a fitted slot when hit hard enough, becoming part of the flat surface, they can be pushed back up from the bottom. The bricks are all in a half-circle shape, so the ball won't get stuck, and will roll down from any position.",
-  ["images/Projects/BrickBreaker1.png","images/Projects/BrickBreaker3.png","images/Projects/BrickBreaker2.gif","images/Projects/BrickBreaker4.png"],
+  ["images/Projects/BrickBreaker1.png","images/Projects/BrickBreaker3.png","images/Projects/BrickBreaker2.webm","images/Projects/BrickBreaker4.png"],
 );});

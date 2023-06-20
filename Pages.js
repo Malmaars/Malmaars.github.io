@@ -56,14 +56,12 @@ function OpenPage(pagename){
 }
 
 function ClosePage(element){
-  console.log(element);
   if(element != null){
   element.style.width = "45%";
   element.style.left = "-50%";
   }
 
   else{
-    console.log(openPage);
     openPage.style.width = "45%";
     openPage.style.left = "-50%";
   }
@@ -78,7 +76,6 @@ function ResizePage(){
   var windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
   var windowClientWidth = document.documentElement.clientWidth;
-  console.log(windowClientWidth);
 
   //also do some stuff with the buttons, maybe even change the stylesheet
 
