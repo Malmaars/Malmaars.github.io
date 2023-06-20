@@ -333,17 +333,17 @@ function preload() {
 function isMobileDevice() {
   return /Mobi|Android|iPhone|iPad|iPod|Windows Phone|BlackBerry|Mobile/i.test(navigator.userAgent);
 }
-//we won't preload the gifs, since they're significantly bigger in filesize
+
 preload(
-  "images/Projects/THROWBOT_20title_20screen.jpg","images/Projects/ThrowBotScreenshot.png",/*"images/Projects/ThrowBotGameplay.gif",*/"images/Projects/Cinematic_20Frame_203.jpg",
-  "images/Projects/AntInferno.png",/*"images/Projects/GunFile.gif",*/"images/Projects/GunFile2.png","images/Projects/GunFile3.png",
-  /*"images/Projects/Energizer.gif",*/"images/Projects/Energizer2.png","images/Projects/Energizer3.png","images/Projects/Energizer4.png",
-  "images/Projects/PackCheck1.jpg","images/Projects/PackCheck4.jpg","images/Projects/PackCheck2.jpg",/*"images/Projects/PackCheck.gif",*/
-  "images/Projects/Knowhere1.png","images/Projects/Knowhere2.png",/*"images/Projects/Train.gif",*/"images/Projects/Knowhere4.png",
-  "images/Projects/Whole1.png",/*"images/Projects/Whole.gif",*/"images/Projects/Whole3.png","images/Projects/Whole4.png",
-  "images/Projects/ThreeJsSite1.png", /*"images/Projects/ThreeJs.gif",*/ "images/Projects/ThreeJsSite3.png", "images/Projects/ThreeJsSite4.png",
-  "images/Projects/Kwal2.png",/*"images/Projects/Kwal.gif",*/"images/Projects/Kwal3.png","images/Projects/Kwal4.png",
-  "images/Projects/BrickBreaker1.png","images/Projects/BrickBreaker3.png",/*"images/Projects/BrickBreaker2.gif",*/"images/Projects/BrickBreaker4.png"
+  "images/Projects/THROWBOT_20title_20screen.jpg","images/Projects/ThrowBotScreenshot.png","images/Projects/ThrowBotGameplay.gif","images/Projects/Cinematic_20Frame_203.jpg",
+  "images/Projects/AntInferno.png","images/Projects/GunFile.gif","images/Projects/GunFile2.png","images/Projects/GunFile3.png",
+  "images/Projects/Energizer.gif","images/Projects/Energizer2.png","images/Projects/Energizer3.png","images/Projects/Energizer4.png",
+  "images/Projects/PackCheck1.jpg","images/Projects/PackCheck4.jpg","images/Projects/PackCheck2.jpg","images/Projects/PackCheck.gif",
+  "images/Projects/Knowhere1.png","images/Projects/Knowhere2.png","images/Projects/Train.gif","images/Projects/Knowhere4.png",
+  "images/Projects/Whole1.png","images/Projects/Whole.gif","images/Projects/Whole3.png","images/Projects/Whole4.png",
+  "images/Projects/ThreeJsSite1.png", "images/Projects/ThreeJs.gif", "images/Projects/ThreeJsSite3.png", "images/Projects/ThreeJsSite4.png",
+  "images/Projects/Kwal2.png","images/Projects/Kwal.gif","images/Projects/Kwal3.png","images/Projects/Kwal4.png",
+  "images/Projects/BrickBreaker1.png","images/Projects/BrickBreaker3.png","images/Projects/BrickBreaker2.gif","images/Projects/BrickBreaker4.png"
 );
 
 
