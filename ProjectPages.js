@@ -240,7 +240,6 @@ async function SpawnVerticalPage(title, roles, disciplines, description, images,
       }else{
       img = document.createElement('img');
       }
-      img = document.createElement('img');
       img.src = images[i];
       popUpImageParent.appendChild(img);
     }
