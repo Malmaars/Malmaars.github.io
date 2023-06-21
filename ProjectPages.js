@@ -360,7 +360,7 @@ preload(
   "images/Projects/Knowhere1.jpg","images/Projects/Knowhere2.jpg",/* "images/Projects/Train.gif", */"images/Projects/Knowhere4.jpg",
   "images/Projects/Whole1.jpg",/* "images/Projects/Whole.gif", */"images/Projects/Whole3.jpg","images/Projects/Whole4.jpg",
   "images/Projects/ThreeJsSite1.png", /* "images/Projects/ThreeJs.gif", */ "images/Projects/ThreeJsSite3.png", "images/Projects/ThreeJsSite4.png",
-  "images/Projects/Kwal2.png",/* "images/Projects/Kwal.gif", */"images/Projects/Kwal3.png","images/Projects/Kwal4.png",
+  "images/Projects/Kwal2.jpg",/* "images/Projects/Kwal.gif", */"images/Projects/Kwal3.png","images/Projects/Kwal4.png",
   "images/Projects/BrickBreaker1.png","images/Projects/BrickBreaker3.png",/* "images/Projects/BrickBreaker2.gif", */"images/Projects/BrickBreaker4.png"
 );
 
@@ -433,7 +433,7 @@ document.getElementById('Kwal').addEventListener('click', function(event) {Spawn
   "Everything",
   "Physical - Arduino - Unity - C#",
   "In the first year of college, one assignment was to make something using arduino. The assignment was very open-ended. I decided to make a special controller. The controller was based off jellyfish, which I had done extensive research on before. Like jellyfish would, the controller detects light. <br> This happens through multiple light sensors, which connect to the arduino, which then connects to a laptop. The received data translates to the game, where a jellyfish will move to a direction. The direction differs on where the controller receives light. <br> This is one of my personal favorite projects, I really enjoyed the physical work, building the controller. There was a plan to develop it further, but the emergence of covid stopped that.",
-  ["images/Projects/Kwal3.png","images/Projects/Kwal2.png","images/Projects/Kwal.webm","images/Projects/Kwal4.png"],
+  ["images/Projects/Kwal3.png","images/Projects/Kwal2.jpg","images/Projects/Kwal.webm","images/Projects/Kwal4.png"],
   "https://youtube.com/shorts/USdGcHCOjiE",
   "Go to video"
 );});
