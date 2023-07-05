@@ -128,8 +128,15 @@ async function SpawnHorizontalPage(title, roles, disciplines, description, image
   var imgRatio = imgWidth / imgHeight;
 
   //4: set the width of the images to 50% the container, than calculate their actual height
+  if(imgWidth != null && imgHeight != null){
   var parentWidth = parseInt(currentPopUp.style.width) * 0.585;
-  var newHeight = parentWidth / imgRatio  
+  var newHeight = parentWidth / imgRatio;
+  console.log(newHeight);  
+  }
+
+  else{
+    var newHeight = 800; 
+  }
 
   //5: set the height of the popup to 2x the image height 
   document.body.insertBefore(currentPopUp,document.getElementById("border"));
@@ -252,8 +259,10 @@ async function SpawnVerticalPage(title, roles, disciplines, description, images,
   var imgRatio = imgWidth / imgHeight;
 
   //4: set the width of the images to 50% the container, than calculate their actual height
+  if(imgWidth != null && imgHeight != null){
   var parentWidth = parseInt(currentPopUp.style.width) * 0.585;
   var newWidth = parentWidth / imgRatio  
+  }
 
   //5: set the height of the popup to 2x the image height 
   document.body.insertBefore(currentPopUp,document.getElementById("border"));
