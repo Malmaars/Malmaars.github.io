@@ -128,7 +128,7 @@ async function SpawnHorizontalPage(title, roles, disciplines, description, image
   var imgRatio = imgWidth / imgHeight;
 
   //4: set the width of the images to 50% the container, than calculate their actual height
-  if(imgWidth != null && imgHeight != null){
+  if(imgWidth != null && imgHeight != null && imgWidth != 0 && imgHeight != 0){
   var parentWidth = parseInt(currentPopUp.style.width) * 0.585;
   var newHeight = parentWidth / imgRatio;
   console.log(newHeight);  
