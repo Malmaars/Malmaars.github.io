@@ -5,11 +5,25 @@ document.getElementById('planetOne').addEventListener('click', function(event) {
 document.getElementById('planetOneSecondHalf').addEventListener('click', function(event) {OpenPage("aboutMePage");});
 document.getElementById('ProjectsButton').addEventListener('click', function(event) { OpenPage("projectsPage");});
 document.getElementById('planetTwo').addEventListener('click', function(event) { OpenPage("projectsPage");});
+document.getElementById('planetTwoMoon').addEventListener('click', function(event) { OpenPage("projectsPage");});
 document.getElementById('ExperienceButton').addEventListener('click', function(event) { OpenPage("experiencePage");});
 document.getElementById('planetFour').addEventListener('click', function(event) { OpenPage("experiencePage");});
 document.getElementById('planetFive').addEventListener('click', function(event) { OpenPage("experiencePage");});
 document.getElementById('ContactButton').addEventListener('click', function(event) {OpenPage("contactPage");});
 document.getElementById('planetThree').addEventListener('click', function(event) {OpenPage("contactPage");});
+document.getElementById('planetThreeMoonOne').addEventListener('click', function(event) {OpenPage("contactPage");});
+document.getElementById('planetThreeMoonTwo').addEventListener('click', function(event) {OpenPage("contactPage");});
+document.getElementById('planetThreeMoonThree').addEventListener('click', function(event) {OpenPage("contactPage");});
+document.getElementById('planetThreeMoonFour').addEventListener('click', function(event) {OpenPage("contactPage");});
+document.getElementById('planetThreeMoonFive').addEventListener('click', function(event) {OpenPage("contactPage");});
+document.getElementById('planetThreeMoonSix').addEventListener('click', function(event) {OpenPage("contactPage");});
+document.getElementById('planetThreeMoonSeven').addEventListener('click', function(event) {OpenPage("contactPage");});
+document.getElementById('planetThreeMoonEight').addEventListener('click', function(event) {OpenPage("contactPage");});
+document.getElementById('planetThreeMoonNine').addEventListener('click', function(event) {OpenPage("contactPage");});
+document.getElementById('planetThreeMoonTen').addEventListener('click', function(event) {OpenPage("contactPage");});
+document.getElementById('planetThreeMoonEleven').addEventListener('click', function(event) {OpenPage("contactPage");});
+document.getElementById('planetThreeMoonTwelve').addEventListener('click', function(event) {OpenPage("contactPage");});
+
 
 const pageElements = [
   document.getElementById("welcomePage"),
