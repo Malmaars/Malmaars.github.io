@@ -370,7 +370,8 @@ preload(
   "images/Projects/Whole1.jpg",/* "images/Projects/Whole.gif", */"images/Projects/Whole3.jpg","images/Projects/Whole4.jpg",
   "images/Projects/ThreeJsSite1.png", /* "images/Projects/ThreeJs.gif", */ "images/Projects/ThreeJsSite3.png", "images/Projects/ThreeJsSite4.png",
   "images/Projects/Kwal2.jpg",/* "images/Projects/Kwal.gif", */"images/Projects/Kwal3.png","images/Projects/Kwal4.png",
-  "images/Projects/BrickBreaker1.png","images/Projects/BrickBreaker3.png",/* "images/Projects/BrickBreaker2.gif", */"images/Projects/BrickBreaker4.png"
+  "images/Projects/BrickBreaker1.png","images/Projects/BrickBreaker3.png",/* "images/Projects/BrickBreaker2.gif", */"images/Projects/BrickBreaker4.png",
+  "images/Projects/Utablia1.jpg","images/Projects/Utablia2.jpg", "images/Projects/Utablia4.jpg"
 );
 
 
@@ -452,4 +453,12 @@ document.getElementById('BrickBreaker').addEventListener('click', function(event
   "Physical",
   "I was tasked to, within a week, make a physical thing that has some kind of motion in it, and is not driven by electronics. I chose to make something interactive. I really like pinball machines, and I wondered why there wasn't a pinball machine about brickbreaker yet. It seems compatible on paper. So I set out to make just that, a brickbreaker pinball machine. <br> After testing some cardboard prototypes, the final prototype consisted of lasercut wood, with the addition of a spring (stolen from a pen) and a marble <a href='ILied.html' target='_blank' class='pLink'>(stolen from a child)</a>. The bricks are designed so they fall into a fitted slot when hit hard enough, becoming part of the flat surface, they can be pushed back up from the bottom. The bricks are all in a half-circle shape, so the ball won't get stuck, and will roll down from any position.",
   ["images/Projects/BrickBreaker1.png","images/Projects/BrickBreaker3.png","images/Projects/BrickBreaker2.webm","images/Projects/BrickBreaker4.png"],
+);});
+
+document.getElementById('Utablia').addEventListener('click', function(event) {SpawnPage(
+  "Utablia",
+  "Developer/Designer",
+  "Physical - Unity - C# - Reactivision",
+  "As a context project for HKU, we were tasked with creating an experience that could stand on the <a href='https://sencity.nl/' target='_blank' class='pLink'>Sencity Festival</a>, a festival for the deaf and hard of hearing. We designed a table where people could draw different environments, to which the animals on the table would react. We kept in mind that the interaction of the festival-goers would be very short. The result of this is that the experience is easy to understand from the start, we wanted to encourage the festival-goers to try different things and experiment with the table, while trying to reach goals on the table. <br> Although it wasn't expected from HKU, we managed to stand on Sencity, and I was pleased to see the festival-goers were experiencing the type of interaction we designed the table for, it got strangers talking with each other, and connected deaf and hearing people. <br> This project took about 5 months, but due to complications I only had about 3 months to work on it, I was in charge of all the technology involved in the table. The program runs in Unity with the help of reacTIVision. For the hardware I reused the beamer with infrared cameras from a reactable, which is how we tracked the pawns people could use for drawing. <br><br><br>",
+  ["images/Projects/Utablia1.jpg","images/Projects/Utablia2.jpg","images/Projects/Utablia.webm","images/Projects/Utablia4.jpg"],
 );});
