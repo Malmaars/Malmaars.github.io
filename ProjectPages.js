@@ -371,7 +371,13 @@ preload(
   "images/Projects/ThreeJsSite1.png", /* "images/Projects/ThreeJs.gif", */ "images/Projects/ThreeJsSite3.png", "images/Projects/ThreeJsSite4.png",
   "images/Projects/Kwal2.jpg",/* "images/Projects/Kwal.gif", */"images/Projects/Kwal3.png","images/Projects/Kwal4.png",
   "images/Projects/BrickBreaker1.png","images/Projects/BrickBreaker3.png",/* "images/Projects/BrickBreaker2.gif", */"images/Projects/BrickBreaker4.png",
-  "images/Projects/Utablia1.jpg","images/Projects/Utablia2.jpg", "images/Projects/Utablia4.jpg"
+  "images/Projects/Utablia1.jpg","images/Projects/Utablia2.jpg", "images/Projects/Utablia4.jpg",
+  "images/Projects/Petten1.png", "images/Projects/Petten2.png", "images/Projects/Petten3.png",
+   "images/Projects/WaddenCentrum1.png","images/Projects/WaddenCentrum2.png","images/Projects/WaddenCentrum4.png","images/Projects/WaddenCentrum3.png",
+   "images/Projects/SurfnTurf1.png","images/Projects/SurfnTurf2.jpg","images/Projects/SurfnTurf3.jpg",
+   "images/Projects/WordSoup1.png","images/Projects/WordSoup2.png","images/Projects/WordSoup3.png",
+   "images/Projects/BolBotsing3.png","images/Projects/BolBotsing2.png"
+
 );
 
 
@@ -461,4 +467,48 @@ document.getElementById('Utablia').addEventListener('click', function(event) {Sp
   "Physical - Unity - C# - Reactivision",
   "As a context project for HKU, we were tasked with creating an experience that could stand on the <a href='https://sencity.nl/' target='_blank' class='pLink'>Sencity Festival</a>, a festival for the deaf and hard of hearing. We designed a table where people could draw different environments, to which the animals on the table would react. We kept in mind that the interaction of the festival-goers would be very short. The result of this is that the experience is easy to understand from the start, we wanted to encourage the festival-goers to try different things and experiment with the table, while trying to reach goals on the table. <br> Although it wasn't expected from HKU, we managed to stand on Sencity, and I was pleased to see the festival-goers were experiencing the type of interaction we designed the table for, it got strangers talking with each other, and connected deaf and hearing people. <br> This project took about 5 months, but due to complications I only had about 3 months to work on it, I was in charge of all the technology involved in the table. The program runs in Unity with the help of reacTIVision. For the hardware I reused the beamer with infrared cameras from a reactable, which is how we tracked the pawns people could use for drawing. <br><br><br>",
   ["images/Projects/Utablia1.jpg","images/Projects/Utablia2.jpg","images/Projects/Utablia.webm","images/Projects/Utablia4.jpg"],
+);});
+
+document.getElementById('SurfnTurf').addEventListener('click', function(event) {SpawnPage(
+  "Surf 'n Turf",
+  "Developer/Designer",
+  "Unity - C#",
+  "Surf 'n Turf is an upcoming 3D platformer, <a href='https://store.steampowered.com/app/3514850/Surf_n_Turf/' target='_blank' class='pLink'>which will be coming to Steam</a>.<br>This project was my graduation project. I am fully responsible for the design and coding for the movement. My goal was to make movement that evokes nostalgia of platformers from the 5th generation consoles, yet also granting the player complex and creative ways to solve platforming problems. <br>The game has not yet been released, but has received high praise from playtesters and teachers from HKU.<br><br><br>",
+  ["images/Projects/SurfnTurf1.png","images/Projects/SurfnTurf2.jpg","images/Projects/SurfnTurf.webm","images/Projects/SurfnTurf3.jpg"],
+);});
+
+
+document.getElementById('Petten').addEventListener('click', function(event) {SpawnPage(
+  "De Dijk Petten",
+  "Developer",
+  "Unity - C# - Physical - YIPP",
+  "The biggest project I worked on during my internship at <a href='https://yipp.nl/projects/163-experience_center_petten/?lang=nl'target='_blank' class='pLink'>YIPP</a>. The project consisted of two beamers projecting at an angle inside a tunnel. For this project to work, I made a calibration system to calibrate the image in person, since it's impossible to account for the physical angle of the beamer. There are also some more features to make sure the projection looks extremely good, as if you're looking at an lcd screen, like a perfect fade between the two projections at the top.<br>The project runs a video that can be scrubbed by the user using a large wheel.<br><br><br>",
+  ["images/Projects/Petten1.png","images/Projects/Petten2.png","images/Projects/Petten.webm","images/Projects/Petten3.png"],
+);});
+
+
+document.getElementById('Waddencentrum').addEventListener('click', function(event) {SpawnPage(
+  "Microscope Waddencentrum",
+  "Developer",
+  "Unity - C# - Physical - RFID - YIPP" ,
+  "This project was made during my internship at <a href='https://yipp.nl/projects/164-wereld_erfgoedcentrum_waddenzee/'target='_blank' class='pLink'>YIPP</a>. I had to make a microscope that zoomed in on cells when turning a knob, and when rotating the knob the other way, it would show an animation about what the user is looking at.<br>Since a microscope uses two eyes, I had the chance to make some 3D effects withing the animations, making the experience just a little more entertaining. This project is installed at <a href='https://ontdekwec.nl/' target='_blank' class='pLink'>waddencentrum Pieterburen</a><br><br><br>",
+  ["images/Projects/WaddenCentrum1.png","images/Projects/WaddenCentrum2.png","images/Projects/WaddenCentrum4.png","images/Projects/WaddenCentrum3.png"],
+);});
+
+
+document.getElementById('WordSoup').addEventListener('click', function(event) {SpawnPage(
+  "Word Soup",
+  "Developer/Designer",
+  "Unity - C# - Physical - YIPP",
+  "Bol Botsing was a side project I made during the free time I had during my internship at YIPP. In the moments where I was waiting for feedback from clients or waiting on assets.<br>The game was designed to be played on a large touchscreen at YIPP. This gave me an opportunity to get accustomed to the way YIPP handles touchscreens. Since I realized the developers at YIPP were very competitive, I made a game where each player needs to make the largest (correct) word. They do this by dragging tiles to their side, meaning you are also able to steal tiles from others.<br>The people at YIPP had a great time playing this game. It was a received well.<br><br><br>",
+  ["images/Projects/WordSoup1.png","images/Projects/WordSoup2.png","images/Projects/WordSoup.webm","images/Projects/WordSoup3.png"],
+);});
+
+
+document.getElementById('Bol Botsing').addEventListener('click', function(event) {SpawnPage(
+  "Bol Botsing",
+  "Developer/Designer",
+  "Unity - C# - Physical - RFID - YIPP",
+  "Bol Botsing was a project I made at the start of my internship at YIPP.<br>I was tasked to make an interactive installation for kids visiting YIPP during the <a href='https://weekendvandewetenschap.nl/' target='_blank' class='pLink'>weekend of science</a>, within a month.<br>What I came up with was a platform fighthing game where the players could choose their own moveset.<br>Each player has 4 buttons, two are used to walk left and right, the other two can be 'reprogrammed' by fitting cards in the slots behind the buttons.<br>I achieved this by using rfid readers in the controllers and rfid tags in the cards.<br>All controllers were designed and made by me.<br><br><br>",
+  ["images/Projects/BolBotsing3.png","images/Projects/BolBotsing4.webm","images/Projects/BolBotsing.webm","images/Projects/BolBotsing2.png"],
 );});
