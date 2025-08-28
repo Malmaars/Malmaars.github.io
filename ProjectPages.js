@@ -104,22 +104,46 @@ async function SpawnHorizontalPage(title, roles, disciplines, description, image
     for (let i = 0; i < images.length; i++){
       var fileExt = images[i].substr(images[i].lastIndexOf('.') + 1);
       
-      if(fileExt == "webm"){
-        console.log("creating video");
-        img = document.createElement('video');
-        img.autoplay = true;
-        img.muted = true;
-        img.loop = true;
-        img.playsInline = true;
-      }else{
-      img = document.createElement('img');
-      }
+if (fileExt == "webm") {
+  console.log("creating video");
+  img = document.createElement('video');
+  img.autoplay = true;
+  img.muted = true;
+  img.loop = true;
+  img.playsInline = true;
 
-      console.log(images[i]);
-      img.src = images[i];
-      popUpImageParent.appendChild(img);
+  img.onloadedmetadata = function () {
+    //calculatePopupHeight(img.videoWidth, img.videoHeight);
+    SpawnHorizontalPopUp(img, popUpImageParent, popUpTextParent);
+  };
+} else {
+  img = document.createElement('img');
+  img.onload = function () {
+    //calculatePopupHeight(img.naturalWidth, img.naturalHeight);
+    SpawnHorizontalPopUp(img, popUpImageParent, popUpTextParent);
+  };
+}
+
+img.src = images[i];
+popUpImageParent.appendChild(img);
+
     }
+}
 
+function calculatePopupHeight(imgWidth, imgHeight) {
+  if (imgWidth && imgHeight) {
+    var parentWidth = parseInt(currentPopUp.style.width) * 0.585;
+    var newHeight = parentWidth / (imgWidth / imgHeight);
+    console.log("Calculated Height:", newHeight);
+    // 👉 you can now set your popup height here
+    currentPopUp.style.height = newHeight + "px";
+  } else {
+    console.log("Default height used");
+    currentPopUp.style.height = "460.6875px";
+  }
+}
+
+async function SpawnHorizontalPopUp(img, popUpImageParent, popUpTextParent){
 
   var imgWidth = img.naturalWidth;
   var imgHeight = img.naturalHeight;
@@ -135,7 +159,7 @@ async function SpawnHorizontalPage(title, roles, disciplines, description, image
   }
 
   else{
-    var newHeight = 800; 
+    var newHeight = 460.6875; 
   }
 
   //5: set the height of the popup to 2x the image height 
@@ -237,20 +261,33 @@ async function SpawnVerticalPage(title, roles, disciplines, description, images,
     for (let i = 0; i < images.length; i++){
       var fileExt = images[i].substr(images[i].lastIndexOf('.') + 1);
       
-      if(fileExt == "webm"){
+      if (fileExt == "webm") {
         console.log("creating video");
         img = document.createElement('video');
         img.autoplay = true;
         img.muted = true;
         img.loop = true;
         img.playsInline = true;
-      }else{
-      img = document.createElement('img');
-      }
-      img.src = images[i];
-      popUpImageParent.appendChild(img);
-    }
 
+        img.onloadedmetadata = function () {
+         // calculatePopupHeight(img.videoWidth, img.videoHeight);
+      SpawnVerticalPopUp(img, popUpImageParent, popUpTextParent);
+        };
+      } else {
+        img = document.createElement('img');
+        img.onload = function () {
+          //calculatePopupHeight(img.naturalWidth, img.naturalHeight);
+          SpawnVerticalPopUp(img, popUpImageParent, popUpTextParent);
+
+        };
+      }
+}
+
+async function SpawnVerticalPopUp(img, popUpImageParent, popUpTextParent){
+img.src = images[i];
+popUpImageParent.appendChild(img);
+
+    }
 
   var imgWidth = img.naturalWidth;
   var imgHeight = img.naturalHeight;
@@ -377,7 +414,6 @@ preload(
    "images/Projects/SurfnTurf1.png","images/Projects/SurfnTurf2.jpg","images/Projects/SurfnTurf3.jpg",
    "images/Projects/WordSoup1.png","images/Projects/WordSoup2.png","images/Projects/WordSoup3.png",
    "images/Projects/BolBotsing3.png","images/Projects/BolBotsing2.png"
-
 );
 
 
