@@ -129,7 +129,6 @@ async function SpawnHorizontalPage(title, roles, disciplines, description, image
 
         img.src = images[i];
         popUpImageParent.appendChild(img);
-
     }
 }
 
@@ -424,6 +423,16 @@ preload(
    "images/Projects/BolBotsing3.png","images/Projects/BolBotsing2.png"
 );
 
+
+document.getElementById('Atoom').addEventListener('click', function(event) {SpawnPage(
+  "Atoom",
+  "Developer/Designer",
+  "C# - Unity",
+  "A game made in a weekend for the GMTK game jam 2024. This was a solo project, where I experimented with how satisfying it can be to score points. It's loosely based on atoms and molecules, but definitely not scientifically accurate",
+  ["images/Projects/Atoom2.png","images/Projects/Atoom1.png","images/Projects/Atoom.webm","images/Projects/Atoom3.png"],
+  "https://smos-bois.itch.io/atoom",
+  "Go to game"
+);});
 
 document.getElementById('ThrowBot').addEventListener('click', function(event) {SpawnPage(
   "ThrowBot",
