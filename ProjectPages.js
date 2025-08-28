@@ -535,7 +535,7 @@ document.getElementById('Petten').addEventListener('click', function(event) {Spa
   "De Dijk Petten",
   "Developer",
   "Unity - C# - Physical - YIPP",
-  "The biggest project I worked on during my internship at <a href='https://yipp.nl/projects/163-experience_center_petten/?lang=nl'target='_blank' class='pLink'>YIPP</a>. The project consisted of two beamers projecting at an angle inside a tunnel. For this project to work, I made a calibration system to calibrate the image in person, since it's impossible to account for the physical angle of the beamer. There are also some more features to make sure the projection looks extremely good, as if you're looking at an lcd screen, like a perfect fade between the two projections at the top.<br>The project runs a video that can be scrubbed by the user using a large wheel.<br><br><br>",
+  "The biggest project I worked on during my internship at <a href='https://yipp.nl/projects/163-experience_center_petten/?lang=nl'target='_blank' class='pLink'>YIPP</a>. The project consisted of two beamers projecting at an angle inside a tunnel. For this project to work, I made a calibration system to calibrate the image in person, since it's impossible to account for the physical angle of the beamer. There are also some more features to make sure the projection looks extremely good, as if you're looking at an lcd screen, like a perfect fade between the two projections at the top.<br>The project runs a video that can be scrubbed by the user using a large wheel.<br>During this project, I tested and improved the system on location.<br><br><br>",
   ["images/Projects/Petten1.png","images/Projects/Petten2.png","images/Projects/Petten.webm","images/Projects/Petten3.png"],
 );});
 
@@ -544,7 +544,7 @@ document.getElementById('Waddencentrum').addEventListener('click', function(even
   "Microscope Waddencentrum",
   "Developer",
   "Unity - C# - Physical - RFID - YIPP" ,
-  "This project was made during my internship at <a href='https://yipp.nl/projects/164-wereld_erfgoedcentrum_waddenzee/'target='_blank' class='pLink'>YIPP</a>. I had to make a microscope that zoomed in on cells when turning a knob, and when rotating the knob the other way, it would show an animation about what the user is looking at.<br>Since a microscope uses two eyes, I had the chance to make some 3D effects withing the animations, making the experience just a little more entertaining. This project is installed at <a href='https://ontdekwec.nl/' target='_blank' class='pLink'>waddencentrum Pieterburen</a><br><br><br>",
+  "This project was made during my internship at <a href='https://yipp.nl/projects/164-wereld_erfgoedcentrum_waddenzee/'target='_blank' class='pLink'>YIPP</a>. I had to make a microscope that zoomed in on cells when turning a knob, and when rotating the knob the other way, it would show an animation about what the user is looking at.<br>Since a microscope uses two eyes, I had the chance to make some 3D effects withing the animations, making the experience just a little more entertaining. This project is installed at <a href='https://ontdekwec.nl/' target='_blank' class='pLink'>waddencentrum Pieterburen</a><br>During this project, I presented prototypes of the product, and tested it with the client.<br><br><br>",
   ["images/Projects/WaddenCentrum1.png","images/Projects/WaddenCentrum2.png","images/Projects/WaddenCentrum4.png","images/Projects/WaddenCentrum3.png"],
 );});
 
