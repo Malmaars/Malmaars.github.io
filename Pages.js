@@ -198,5 +198,3 @@ function UnFocus(){
     planets[i].planetElement.backgroundColor = "rgba(255, 255, 255, 1)";
   }
 }
-
-OpenPage("welcomePage");
