@@ -62,7 +62,7 @@ class OrbitingPlanet
   OrbitPlanet() {
 
       //I can make something orbit by fetching the center. I can determine position by its radians
-      var orbitOffset = this.orbitingRef.position();
+      var orbitOffset = $("#solarsystem").position() + this.orbitingRef.position();
       var orbitOffsetInVw = {
         left: (orbitOffset.left / $(window).width()) * 100,
         top: (orbitOffset.top / $(window).width()) * 100
