@@ -420,7 +420,8 @@ preload(
    "images/Projects/WaddenCentrum1.png","images/Projects/WaddenCentrum2.png","images/Projects/WaddenCentrum4.png","images/Projects/WaddenCentrum3.png",
    "images/Projects/SurfnTurf1.png","images/Projects/SurfnTurf2.jpg","images/Projects/SurfnTurf3.jpg",
    "images/Projects/WordSoup1.png","images/Projects/WordSoup2.png","images/Projects/WordSoup3.png",
-   "images/Projects/BolBotsing3.png","images/Projects/BolBotsing2.png"
+   "images/Projects/BolBotsing3.png","images/Projects/BolBotsing2.png",
+   "images/Projects/Cubed2.jpg", "images/Projects/Cubed4.jpg", "images/Projects/Cubed5.png"
 );
 
 
@@ -564,4 +565,13 @@ document.getElementById('Bol Botsing').addEventListener('click', function(event)
   "Unity - C# - Physical - RFID - YIPP",
   "Bol Botsing was a project I made at the start of my internship at YIPP.<br>I was tasked to make an interactive installation for kids visiting YIPP during the <a href='https://weekendvandewetenschap.nl/' target='_blank' class='pLink'>weekend of science</a>, within a month.<br>What I came up with was a platform fighthing game where the players could choose their own moveset.<br>Each player has 4 buttons, two are used to walk left and right, the other two can be 'reprogrammed' by fitting cards in the slots behind the buttons.<br>I achieved this by using rfid readers in the controllers and rfid tags in the cards.<br>All controllers were designed and made by me.<br><br><br>",
   ["images/Projects/BolBotsing3.png","images/Projects/BolBotsing4.webm","images/Projects/BolBotsing.webm","images/Projects/BolBotsing2.png"],
+);});
+
+
+document.getElementById('Cubed³').addEventListener('click', function(event) {SpawnPage(
+  "Cubed³",
+  "Developer/Designer",
+  "Unity - C# - Physical - Arduino - ESP32",
+  "Cubed³ are a prototype of virtual pet toys that are designed to interact with each other. Each cube contains a character, and placing the cubes next to each other makes it possible for the characters to visit each other.<br>For this project, I wrote a complex AI, where characters can pass objects and perform actions with each other, even for items and actions that haven't been created yet. With no need to rewrite past code, ensuring future expansions run smoothly with older models.<br>For this, I made physical prototypes using esp32 to connect the cubes to Unity.<br><br><br>",
+  ["images/Projects/Cubed1.webm","images/Projects/Cubed4.jpg","images/Projects/Cubed2.jpg", "images/Projects/Cubed3.webm"],
 );});
